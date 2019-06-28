@@ -102,7 +102,7 @@ let mainHTML=`
 let footerHTML = `
 <nav class="nav-wrapper blue darken-4 hide-on-med-and-down">
     <ul>
-        <li class="OSIJobs"><a>OSI Jobs</a></li>
+        <li class="OSIJobs"><a href="/">OSI Jobs</a></li>
         <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
         <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
         <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
