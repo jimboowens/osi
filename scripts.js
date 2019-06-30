@@ -7,7 +7,7 @@ let footer = document.querySelector('.footer')
 //================================START OF HTML TO BE INJECTED================================
 //========================================HTML ON LOAD========================================
 let navBarHTML=`
-    <nav class="nav-wrapper blue darken-4">
+    <nav class="blue darken-4">
         <ul>
             <li><a class="OSIJobs"href="/">OSI Jobs</a></li>
             <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
@@ -19,7 +19,7 @@ let navBarHTML=`
             <li><a><div class="contact">Contact Us</div></a></li>
             <li><a><div class="employerServices">Employer Services</div></a></li>
             <li><a><div class="ventureCapitalPartnership">Venture Capital Partnership</div></a></li>
-            <li><a><div class="jobListings">Job Listings</div></a></li>
+            <li><a href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
         </ul>
         <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div></div>
         <div id="panel" class="blue darken-4 right show-on-med-and-down">
@@ -27,14 +27,14 @@ let navBarHTML=`
             <a><div class="contact">Contact Us</div></a>
             <a><div class="employerServices">Employer Services</div></a>
             <a><div class="ventureCapitalPartnership">Venture Capial Partnership</div></a>
-            <a><div class="jobListings">Job Listings</div></a>
+            <a href="https://loxo.co/osi-jobs"><div>Job Listings</div></a>
         </div>
     </nav>
 `
 //================================MAIN CONTENT, THIS HTML IS REPLACED ONCLICK EVENTS================================
 
 let mainHTML=`
-    <div class="your-class"><div class="sliderImage"></div></div><div class="container"></div></div>
+    <div class="your-class"></div>
     <div class="your-class">
         <div class="sliderImage">
             <img class="z-depth-5" src="./public/images/fill.jpg" class="image1" />
@@ -50,7 +50,7 @@ let mainHTML=`
             <h2>Our Mission Statement:</h2>
             <p>Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</p>
         </div>
-        <div class="sliderImage  z-depth-5">
+        <div class="sliderImage">
             <img class="z-depth-5" src="./public/images/veggies.jpg" class="image3" />
         </div>
         <div class="sliderText">
@@ -91,16 +91,14 @@ let mainHTML=`
             </div>
             <div class="col s12 m4">
                 <h3>New Jobs:</h3>
-                <div>
-                    test
-                </div>
+                <div id="loxoResponse"></div>
             </div>
         </div>
     </div>
 `
 //======================================END MAIN HTML CONTENT=================================
 let footerHTML = `
-<nav class="nav-wrapper blue darken-4 hide-on-med-and-down">
+<nav class="nav-wrapper blue darken-4 hide-on-med-and-down footer">
     <ul>
         <li class="OSIJobs"><a href="/">OSI Jobs</a></li>
         <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
@@ -113,7 +111,7 @@ let footerHTML = `
     <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a><div class="about">About Us</div></div></a></li>
         <li><a><div class="contact">Contact</div></a></li>
-        <li><a><div class="jobListings">Job Listings</div></a></li>
+        <li><a href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
     </ul>
 </nav>
 `
@@ -143,7 +141,6 @@ let aboutHTML = `
                     </div>
                 </div>
             </div>
-
             <div class="memberName"><h3>Dave Buergler – Recruiter / Senior Partner</h3></div>
             <div class="member row">
                 <div class="col s4">
@@ -176,7 +173,61 @@ let aboutHTML = `
 let contactHTML = `
     <div class="contactPage">
         <div class="headerDiv blue darken-4">
-            contact us
+            <div class="headerText">Contact us</div>
+        </div>
+        <div class="container">
+            <p>At OSI, we aren’t some unapproachable mega-corporation with hoops to jump through and forms to fill out. If you have a question for us or have something to tell us, we would like to hear it. Feel free to drop us a line or give us a call.</p>
+            <div class="row">
+                <div class="col s4">
+                    <img class="contactImage" src="./public/images/contact_us.png" />
+                </div>
+                <div class="contactOSI col s8">
+                    <div class="memberName"><h3>Tim Oliver  – Recruiter / Senior Partner, CPC</h3></div>
+                    <div class="member row">
+                        <div class="col s4">
+                            <img class="memberImage z-depth-5" src="./public/images/Tim.jpeg" />
+                        </div>
+                        <div class="memberDescription col s8">
+                            <div>
+                                <a href="mailto:tim@osijobs.com target="blank">Email Tim</a>
+                                <p>P.O. Box 401</p>
+                                <p>Lake Hartwell, Georgia</p>
+                                <p>Phone: 770.760.7661</p>
+                                <p><a href="http://www.linkedin.com/in/timoliverrecruiter">Linkedin</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="memberName"><h3>Dave Buergler – Recruiter / Senior Partner</h3></div>
+                    <div class="member row">
+                        <div class="col s4">
+                        <img class="memberImage z-depth-5" src="./public/images/Dave.png" />
+                        </div>
+                        <div class="memberDescription col s8">
+                            <div>
+                                <a href="mailto:dave@osijobs.com target="blank">Email Dave</a>
+                                <p>Apex, NC</p>
+                                <p>Phone: 919-779-0833</p>
+                                <p>Fax: 919-307-4942</p>
+                                <p><a href="http://www.linkedin.com/in/dbuergler">Linkedin</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
+                    <div class="member row">
+                        <div class="col s4">
+                            <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
+                        </div>
+                        <div class="memberDescription col s8">
+                            <div>
+                                <a href="mailto:joel@osijobs.com target="blank">Email Joel</a>
+                                <p>Winchester, VA</p>
+                                <p>Phone: 770-883-2214</p>
+                                <p><a href="http://www.linkedin.com/in/joeltoliver">Linkedin</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 `
@@ -189,44 +240,43 @@ let ventureCapitalPartnershipHTML = `
 <div class="ventureCapitalPartnershipPage">venture capital partnership</div>
 `
 
-let jobListingsHTML = `
-<div class="contactPage">job listings</div>
-`
+//redirect to loxo, but in the future event there's a local page, this is where the HTML would be injected
+// let jobListingsHTML = `
+// <div class="contactPage">job listings</div>
+// `
 //==================================END OF HTML TO BE INJECTED================================
-// $.getJSON();
+//==================================AJAX REQUEST FOR LOXO JOBS================================
 
-//This is the first get request to try to get the 200 response, but the username and password are not working even when I manually go to this url and input the information
 
-$.getJSON( "https://loxo.co/api/osi-jobs/jobs", {username:"osi_api",password:"475629a431c25a079f30da1ebf929804"}).done((data)=> {
-    var items = [];
-    $.each( data, (key, val)=> {
-      items.push(`<li id="${key}">${val}</li>`);
-    });
+$.ajax({
+    url: "https://loxo.co/api/osi-jobs/jobs",
+    type: "GET",
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=');
+
+        xhr.setRequestHeader('Content-type', 'multipart/form-data');
+
+
+    }, 
+    dataType: 'json', 
+    xhrFields: {
+        withCredentials: true
+      },
+    success: function(data) {
+        console.log(data)
+        var items = [];
+        $.each( data.results, (i)=> {
+            console.log(data.results[i])
+        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a></li>`);
+        });
    
-    $( "<ul/>", {
-      "class": "my-new-list",
-      html: items.join( "" )
-    }).appendTo( "main" );
-  });
-
-// 401 error unauthorized as well.
-
-var HttpClient = function(){
-    this.get = (url,cb)=> {
-        var anHttpRequest = new XMLHttpRequest();
-        anHttpRequest.onreadystatechange = ()=> { 
-            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200){cb(anHttpRequest.responseText)}
-        }
-        anHttpRequest.open("get", url, true);            
-        anHttpRequest.send(null);
-    }
-}
-
-let client = new HttpClient();
-client.get('https://loxo.co/api/osi-jobs/jobs', (response)=> {
-    console.log(response);
-})
-
+        $( "<ul/>", {
+        "class": "my-new-list",
+        html: items.join( "" )
+        }).appendTo( "#loxoResponse" );
+    },
+});
+// <a href="https://loxo.co/job/251748">Supplier Quality Manager</a>
 //================================INJECTION OF HTML ONLOAD================================
 $(navBar).html(navBarHTML)
 $(main).html(mainHTML)
@@ -285,8 +335,9 @@ $(document).ready(()=> {
     $(".ventureCapitalPartnership").click(()=>{
         $(main).html(ventureCapitalPartnershipHTML)
     })
-    $(".jobListings").click(()=>{
-        $(main).html(jobListingsHTML)
-    })
+    //redirect to loxo, but in the future event there's a local page, this is where the click handler is
+    // $(".jobListings").click(()=>{
+    //     $(main).html(jobListingsHTML)
+    // })
 })
 

@@ -14,11 +14,15 @@ h3{
     font-size: 2vw;
 }
 p{
-    font-size: 2vh;
+    font-size: 1vh;
 }
 
 ul,p,div{
     font-size: 1.5vw;
+}
+
+.navBar .main .footer{
+    width:100%;
 }
 
 @font-face {
@@ -96,6 +100,7 @@ ul,p,div{
 
 .sliderText{
     /* margin-left:-15vw; */
+    padding-top:8vh;
     width:50vw;
 }
 
@@ -117,11 +122,14 @@ ul,p,div{
 .headerDiv{
     border-radius: 10px;
     margin:25px;
+    /* border-left:-25px;
+    border-right:-25px; */
     color:white;
 }
 
 .headerText{
     margin-left: 30px;
+    align-self: center;
 }
 
 .member{
@@ -134,4 +142,8 @@ ul,p,div{
     margin-right: auto;
     width: 50%;
     margin-top:30px;
+}
+
+.contactImage{
+    width:100%;
 }
