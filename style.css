@@ -64,11 +64,11 @@ ul,p,div{
     text-align: right;
   }
   
-  #panel {
-    padding: 50px;
-    display: none;
-    z-index:100000 !important;
-  }
+#panel {
+padding: 50px;
+display: none;
+z-index:100000 !important;
+}
 
 @media(max-width:992px){
   
@@ -144,6 +144,31 @@ ul,p,div{
     margin-top:30px;
 }
 
-.contactImage{
+.contactImage,.ventureImage{
+    width:100%;
+}
+
+.servicesContent{
+    margin-bottom:60px;
+}
+
+.servicesContent p,ul{
+    margin: 30px;
+}
+
+.servicesContent:nth-child(2n+1) img{
+    margin-top:50%;
+}
+
+.servicesContent:nth-child(4) img{
+    margin-top: 40%;
+}
+
+
+.servicesContent:last-child img{
+    margin-top:0vh;
+}
+
+.servicesImage{
     width:100%;
 }

@@ -21,7 +21,7 @@ let navBarHTML=`
             <li><a><div class="ventureCapitalPartnership">Venture Capital Partnership</div></a></li>
             <li><a href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
         </ul>
-        <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div></div>
+        <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div>
         <div id="panel" class="blue darken-4 right show-on-med-and-down">
             <a><div class="about">About Us</div></a>
             <a><div class="contact">Contact Us</div></a>
@@ -34,31 +34,31 @@ let navBarHTML=`
 //================================MAIN CONTENT, THIS HTML IS REPLACED ONCLICK EVENTS================================
 
 let mainHTML=`
-    <div class="your-class"></div>
+    <div class="your-class"><div class="sliderImage"></div></div><div class="container"></div></div>
     <div class="your-class">
         <div class="sliderImage">
-            <img class="z-depth-5" src="./public/images/fill.jpg" class="image1" />
+            <img class="z-depth-5" src="./public/images/veggies.jpg" />
+        </div>
+        <div class="sliderText">
+            <h2>Excellence in Food Industry Recruitment</h2>
+            <p>At OSI, we specialize in food industry executive recruitment. Whether you are an employer looking for the perfect candidate, or you a food industry professional looking to make a change, feel free to take a look around.</p>
+        </div>
+        <div class="sliderImage">
+            <img class="z-depth-5" src="./public/images/fill.jpg" />
         </div>
         <div class="sliderText">
             <h2>We fill the following types of positions</h2>
             <p>Operations/Manufacturing • Purchasing/Supply Chain • Research & Development • Quality Assurance • Sales (National/Regional/DSD) • Engineering/Maintenance • CEO, CFO, COO, GM • Project Management • Customer Service • Food Safety • Distribution/Logistics Management • Sanitation</p>
         </div>
         <div class="sliderImage">
-            <img class="z-depth-5" src="./public/images/grass.jpg" class="image2"/>
+            <img class="z-depth-5" src="./public/images/grass.jpg"/>
         </div>
         <div class="sliderText">
             <h2>Our Mission Statement:</h2>
             <p>Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</p>
         </div>
-        <div class="sliderImage">
-            <img class="z-depth-5" src="./public/images/veggies.jpg" class="image3" />
-        </div>
-        <div class="sliderText">
-            <h2>Excellence in Food Industry Recruitment</h2>
-            <p>At OSI, we specialize in food industry executive recruitment. Whether you are an employer looking for the perfect candidate, or you a food industry professional looking to make a change, feel free to take a look around.</p>
-        </div>
-        </div>
-        <div class="container">
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col s12 m4">
                 <h3>Welcome to OSI</h3>
@@ -233,11 +233,109 @@ let contactHTML = `
 `
 
 let employerServicesHTML = `
-<div class="employerServicesPage">employer services</div>
+    <div class="employerServicesPage">
+        <div class="headerDiv blue darken-4">
+            <div class="headerText">
+                Employer Services
+            </div>
+        </div>
+        <div class="container">
+            <div class="row servicesContent">
+                <div class="col s4">
+                    <img class="z-depth-5 servicesImage" src="./public/images/beakers.jpg" />
+                </div>
+                <div class="col s8 right">
+                    <p>If your company has positions that need to be filled, you have come to the right place. OSI was established in 1992 and now has offices in Atlanta, Raleigh, and Richmond. Our staff consists of professionals with diverse industry experience in the areas of food technology, marketing, and manufacturing. We take pride in locating professional candidates that meet the criteria established by the companies we represent. We will only send candidates that are interested in the position, willing to relocation if necessary, have the required experience and education, and meet the salary requirements. We will work with your company on a contingency or retained basis.</p>
+                </div>
+            </div>
+            <div class="row servicesContent">
+                <div class="col s4 push-s8">
+                    <img class="z-depth-5 right servicesImage" src="./public/images/icecreamberries.jpg" />
+                </div>
+                <div class="col s8 pull-s4 right">
+                    <p>OSI has a database of over 15,000 food industry professional candidates to help initiate a search. Since we talk with people in the food industry on a daily basis, we are in contact with many qualified individuals that can fill your company’s needs.</p>
+                </div>
+            </div>
+            <div class="row servicesContent">
+                <div class="col s4">
+                    <img class="z-depth-5 servicesImage image2" src="./public/images/factory.jpg" />
+                </div>
+                <div class="col s8 right">
+                    <p>We Offer the Following Services:</p>
+                    <ul class="bullet-content">
+                        <li>Position advertising via OSI website and several online job boards, listed in major food industry publications including Food Technology, Food Processing, Food Product Design, Food Engineering, and Prepared Foods.</li>
+                        <li>Recruitment of food industry professionals obtained from database (15,000+ candidates), networking, the latest in social media (LinkedIn, Facebook, etc.), and targeted “head-hunting.”</li>
+                        <li>Screening and phone interviewing of potential candidates.</li>
+                        <li>Reference checks when necessary.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row servicesContent">
+                <div class="col s4 push-s8">
+                    <img class="z-depth-5 servicesImage image3 right" src="./public/images/peppers.jpg" />
+                </div>
+                <div class="col s8 pull-s4 right">
+                    <p>Our Guarantee:</p>
+                    <ul class="bullet-content">
+                        <li>We take full ownership for the search, recruitment, advertising, screening, phone interviewing, reference checks, and overall placement process.</li>
+                        <li>We represent the client company with the highest degree of ethical standard.</li>
+                        <li>We are completely committed to our client’s total satisfaction.</li>
+                        <li>We guarantee all placements for 3 months from start date. If the candidate leaves for any reason, or is discharged during this time frame, OSI will replace the employee.</li>
+                        <li>We search and recruit without regard to race, religion, national origin, ethnic background, sex, age, medical condition, handicap, or veteran status.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row servicesContent">
+                <div class="col s4">
+                    <img class="z-depth-5 servicesImage" src="./public/images/cheeses.jpg" />
+                </div>
+                <div class="col s8 right">
+                    <br>
+                    <br>
+                    <p>To put our experience to work, simply <a href="mailto:tim@osijobs.com,joel@osijobs.com,dave@osijobs.com">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 `
 
 let ventureCapitalPartnershipHTML = `
-<div class="ventureCapitalPartnershipPage">venture capital partnership</div>
+    <div class="ventureCapitalPartnershipPage">
+        <div class="headerDiv blue darken-4">
+            <div class="headerText">
+                Venture Capital Partnership
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s4">
+                    <img class="ventureImage z-depth-5" src="./public/images/venture.png" />
+                </div>
+                <div class="col s8">
+                    <div>
+                        <p>OSI has a history of success in partnering with private equity and venture capital firms. We provide a complete package of venture capital executive search services. Many of these firms work closely with entrepreneurs to nurture and develop food & beverage businesses and innovative brands that engage today’s consumer. However, very few of these firms have the networking and recruiting expertise to identify top industry talent. OSI is a “preferred” business partner with capital venture firms because of the following:</p>
+                        <ul class="bullet-content">
+                            <li>Ability to respond immediately to our client needs. OSI has a sense of urgency that is unmatched in the recruiting industry.</li>
+                            <li>Flexibility in providing “full-spectrum” recruiting, from senior management (CEO, COO, CFO, CMO, SVP, etc.) to the manager and supervisor levels.</li>
+                            <li>Experienced in venture capital executive search. We have successfully partnered with a number private equity & venture capital firms to provide excellent executive search service.</li>
+                            <li>Exceptional knowledge, understanding, and experience in all aspects of the food industry. OSI will not have to spend time “learning” the industry.</li>
+                            <li>Ability to provide clients with “full-service” recruiting, including screening and testing of candidates, in addition to conducting background and reference checks.</li>
+                        </ul>
+                        <p>Note that OSI has extensive experience recruiting at the following levels of management:</p>
+                        <ul class="bullet-content">
+                            <li>Executive (CEO, COO, CFO, VP).</li>
+                            <li>Director.</li>
+                            <li>Manager/Supervisor.</li>
+                        </ul>
+                        <p>Within the following disciplines:</p>
+                        <p>Sales. Marketing. Manufacturing. Operations. Engineering. Purchasing. Supply Chain. Logistics. R&D. QA. Food Safety. Technical Services. Maintenance. Accounting. HR. etc...</p>
+                        <p>If you are a private equity or venture capital firm, feel free <a href="mailto:joel@osijobs.com,tim@osijobs.com,dave@osijobs.com">contact us</a> to discuss how we can maximize the success of your company. We are here to help with your venture capital executive search.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
 `
 
 //redirect to loxo, but in the future event there's a local page, this is where the HTML would be injected
