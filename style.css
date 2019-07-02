@@ -2,6 +2,7 @@ html{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom:75px;
     font-size:1.5vh;
+    background: url("./public/images/background.jpg")
 }
 
 h3{
