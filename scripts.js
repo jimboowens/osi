@@ -40,14 +40,14 @@ let mainHTML=`
             <img class="z-depth-5" src="./public/images/veggies.png" />
         </div>
         <div class="sliderText">
-            <h1>Excellence in Food Industry Recruitment</h1>
+            <h3>Excellence in Food Industry Recruitment</h3>
             <p>At OSI, we specialize in food industry executive recruitment. Whether you are an employer looking for the perfect candidate, or you a food industry professional looking to make a change, feel free to take a look around.</p>
         </div>
         <div class="sliderImage">
             <img class="z-depth-5" src="./public/images/fill.jpg" />
         </div>
         <div class="sliderText">
-            <h1>We fill the following types of positions</h1>
+            <h3>We fill the following types of positions</h3>
             <p>Operations/Manufacturing • Purchasing/Supply Chain • Research & Development • Quality Assurance • Sales (National/Regional/DSD) • Engineering/Maintenance • CEO, CFO, COO, GM • Project Management • Customer Service • Food Safety • Distribution/Logistics Management • Sanitation</p>
         </div>
         <div class="sliderImage">
