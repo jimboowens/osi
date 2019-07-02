@@ -9,25 +9,25 @@ let footer = document.querySelector('.footer')
 let navBarHTML=`
     <nav class="blue darken-4">
         <ul>
-            <li><a class="OSIJobs"href="/">OSI Jobs</a></li>
+            <li><a class="OSIJobs waves-effect waves-light" href="/">OSI Jobs</a></li>
             <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
             <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
             <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a><div class="about">About Us</div></div></a></li>
-            <li><a><div class="contact">Contact Us</div></a></li>
-            <li><a><div class="employerServices">Employer Services</div></a></li>
-            <li><a><div class="ventureCapitalPartnership">Venture Capital Partnership</div></a></li>
-            <li><a href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
+            <li><a class="waves-effect"><div class="about">About Us</div></div></a></li>
+            <li><a class="waves-effect"><div class="contact">Contact Us</div></a></li>
+            <li><a class="waves-effect"><div class="employerServices">Employer Services</div></a></li>
+            <li><a class="waves-effect"><div class="ventureCapitalPartnership">Venture Capital Partnership</div></a></li>
+            <li><a class="waves-effect" href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
         </ul>
         <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div>
-        <div id="panel" class="blue darken-4 right show-on-med-and-down">
-            <a><div class="about">About Us</div></a>
-            <a><div class="contact">Contact Us</div></a>
-            <a><div class="employerServices">Employer Services</div></a>
-            <a><div class="ventureCapitalPartnership">Venture Capial Partnership</div></a>
-            <a href="https://loxo.co/osi-jobs"><div>Job Listings</div></a>
+        <div id="panel" class="blue darken-4 show-on-med-and-down">
+            <a class="waves-effect"><div class="about">About Us</div></a>
+            <a class="waves-effect"><div class="contact">Contact Us</div></a>
+            <a class="waves-effect"><div class="employerServices">Employer Services</div></a>
+            <a class="waves-effect"><div class="ventureCapitalPartnership">Venture Capial Partnership</div></a>
+            <a class="waves-effect" href="https://loxo.co/osi-jobs"><div>Job Listings</div></a>
         </div>
     </nav>
 `
@@ -37,24 +37,24 @@ let mainHTML=`
     <div class="your-class"><div class="sliderImage"></div></div><div class="container"></div></div>
     <div class="your-class">
         <div class="sliderImage">
-            <img class="z-depth-5" src="./public/images/veggies.jpg" />
+            <img class="z-depth-5" src="./public/images/veggies.png" />
         </div>
         <div class="sliderText">
-            <h2>Excellence in Food Industry Recruitment</h2>
+            <h1>Excellence in Food Industry Recruitment</h1>
             <p>At OSI, we specialize in food industry executive recruitment. Whether you are an employer looking for the perfect candidate, or you a food industry professional looking to make a change, feel free to take a look around.</p>
         </div>
         <div class="sliderImage">
             <img class="z-depth-5" src="./public/images/fill.jpg" />
         </div>
         <div class="sliderText">
-            <h2>We fill the following types of positions</h2>
+            <h1>We fill the following types of positions</h1>
             <p>Operations/Manufacturing • Purchasing/Supply Chain • Research & Development • Quality Assurance • Sales (National/Regional/DSD) • Engineering/Maintenance • CEO, CFO, COO, GM • Project Management • Customer Service • Food Safety • Distribution/Logistics Management • Sanitation</p>
         </div>
         <div class="sliderImage">
-            <img class="z-depth-5" src="./public/images/grass.jpg"/>
+            <img class="z-depth-5" src="./public/images/grass.png"/>
         </div>
         <div class="sliderText">
-            <h2>Our Mission Statement:</h2>
+            <h3>Our Mission Statement:</h3>
             <p>Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</p>
         </div>
     </div>
@@ -70,7 +70,7 @@ let mainHTML=`
                     </ul>
                 </div> <br>
                 <div>
-                    <h3>Mission Statement:</h3>
+                    <h2>Mission Statement:</h2>
                     <div>
                         <ul>Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</ul>
                     </div>
@@ -100,7 +100,7 @@ let mainHTML=`
 let footerHTML = `
 <nav class="nav-wrapper blue darken-4 hide-on-med-and-down footer">
     <ul>
-        <li class="OSIJobs"><a href="/">OSI Jobs</a></li>
+        <li class="OSIJobs"><a class="waves-effect" href="/">OSI Jobs</a></li>
         <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
         <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
         <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
@@ -109,8 +109,8 @@ let footerHTML = `
         <li>© 2019 All Rights Reserved</li>
     </ul>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a><div class="about">About Us</div></div></a></li>
-        <li><a><div class="contact">Contact</div></a></li>
+        <li><a class="waves-effect"><div class="about">About Us</div></div></a></li>
+        <li><a class="waves-effect"><div class="contact">Contact</div></a></li>
         <li><a href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
     </ul>
 </nav>
@@ -130,7 +130,7 @@ let aboutHTML = `
             <div class="headerText">Our Team</div>
         </div>
         <div class="container">
-            <div class="memberName"><h3>Tim Oliver  – Recruiter / Senior Partner, CPC</h3></div>
+            <div class="memberName"><h2>Tim Oliver  – Recruiter / Senior Partner, CPC</h2></div>
             <div class="member row">
                 <div class="col s4">
                     <img class="memberImage z-depth-5" src="./public/images/Tim.jpeg" />
@@ -141,7 +141,7 @@ let aboutHTML = `
                     </div>
                 </div>
             </div>
-            <div class="memberName"><h3>Dave Buergler – Recruiter / Senior Partner</h3></div>
+            <div class="memberName"><h2>Dave Buergler – Recruiter / Senior Partner</h2></div>
             <div class="member row">
                 <div class="col s4">
                 <img class="memberImage z-depth-5" src="./public/images/Dave.png" />
@@ -152,7 +152,7 @@ let aboutHTML = `
                     </div>
                 </div>
             </div>
-            <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
+            <div class="memberName"><h2>Joel Oliver – Senior Recruiter</h2></div>
             <div class="member row">
                 <div class="col s4">
                     <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
@@ -182,7 +182,7 @@ let contactHTML = `
                     <img class="contactImage" src="./public/images/contact_us.png" />
                 </div>
                 <div class="contactOSI col s8">
-                    <div class="memberName"><h3>Tim Oliver  – Recruiter / Senior Partner, CPC</h3></div>
+                    <div class="memberName"><h2>Tim Oliver  – Recruiter / Senior Partner, CPC</h2></div>
                     <div class="member row">
                         <div class="col s4">
                             <img class="memberImage z-depth-5" src="./public/images/Tim.jpeg" />
@@ -197,7 +197,7 @@ let contactHTML = `
                             </div>
                         </div>
                     </div>
-                    <div class="memberName"><h3>Dave Buergler – Recruiter / Senior Partner</h3></div>
+                    <div class="memberName"><h2>Dave Buergler – Recruiter / Senior Partner</h2></div>
                     <div class="member row">
                         <div class="col s4">
                         <img class="memberImage z-depth-5" src="./public/images/Dave.png" />
@@ -212,7 +212,7 @@ let contactHTML = `
                             </div>
                         </div>
                     </div>
-                    <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
+                    <div class="memberName"><h2>Joel Oliver – Senior Recruiter</h2></div>
                     <div class="member row">
                         <div class="col s4">
                             <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
