@@ -9,26 +9,26 @@ let footer = document.querySelector('.footer')
 let navBarHTML=`
     <nav class="blue darken-4">
         <ul>
-            <li><a class="OSIJobs waves-effect waves-light" href="/">OSI Jobs</a></li>
+            <li><a class="OSIJobs waves-effect" href="/">OSI Jobs</a></li>
             <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
             <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
             <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="waves-effect"><div class="about">About Us</div></div></a></li>
-            <li><a class="waves-effect"><div class="contact">Contact Us</div></a></li>
-            <li><a class="waves-effect"><div class="employerServices">Employer Services</div></a></li>
-            <li><a class="waves-effect"><div class="ventureCapitalPartnership">Venture Capital Partnership</div></a></li>
-            <li><a class="waves-effect" href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
+            <li><a class="waves-effect navOptions"><div class="about">About Us</div></div></a></li>
+            <li><a class="waves-effect navOptions"><div class="contact">Contact Us</div></a></li>
+            <li><a class="waves-effect navOptions"><div class="employerServices">Employer Services</div></a></li>
+            <li><a class="waves-effect navOptions"><div class="ventureCapitalPartnership">Venture Capital Partnership</div></a></li>
+            <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
         </ul>
         <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div>
         <div id="panel" class="blue darken-4 show-on-med-and-down">
-            <a class="waves-effect"><div class="about">About Us</div></a>
-            <a class="waves-effect"><div class="contact">Contact Us</div></a>
-            <a class="waves-effect"><div class="employerServices">Employer Services</div></a>
-            <a class="waves-effect"><div class="ventureCapitalPartnership">Venture Capial Partnership</div></a>
-            <a class="waves-effect" href="https://loxo.co/osi-jobs"><div>Job Listings</div></a>
-        </div>
+            <a class="waves-effect dropdownOptions"><div class="about">About Us</div></a>
+            <a class="waves-effect dropdownOptions"><div class="contact">Contact Us</div></a>
+            <a class="waves-effect dropdownOptions"><div class="employerServices">Employer Services</div></a>
+            <a class="waves-effect dropdownOptions"><div class="ventureCapitalPartnership">Venture Capial Partnership</div></a>
+            <a class="waves-effect dropdownOptions" href="https://loxo.co/osi-jobs">Job Listings</a>
+        </Job>
     </nav>
 `
 //================================MAIN CONTENT, THIS HTML IS REPLACED ONCLICK EVENTS================================
@@ -70,7 +70,7 @@ let mainHTML=`
                     </ul>
                 </div> <br>
                 <div>
-                    <h2>Mission Statement:</h2>
+                    <h3>Mission Statement:</h3>
                     <div>
                         <ul>Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</ul>
                     </div>
@@ -100,7 +100,7 @@ let mainHTML=`
 let footerHTML = `
 <nav class="nav-wrapper blue darken-4 hide-on-med-and-down footer">
     <ul>
-        <li class="OSIJobs"><a class="waves-effect" href="/">OSI Jobs</a></li>
+        <li><a class="OSIJobs waves-effect" href="/">OSI Jobs</a></li>
         <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
         <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
         <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
@@ -109,9 +109,9 @@ let footerHTML = `
         <li>© 2019 All Rights Reserved</li>
     </ul>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="waves-effect"><div class="about">About Us</div></div></a></li>
-        <li><a class="waves-effect"><div class="contact">Contact</div></a></li>
-        <li><a href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
+        <li><a class="waves-effect navOptions"><div class="about">About Us</div></div></a></li>
+        <li><a class="waves-effect navOptions"><div class="contact">Contact</div></a></li>
+        <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs">Job Listings</a></li>
     </ul>
 </nav>
 `
@@ -130,7 +130,7 @@ let aboutHTML = `
             <div class="headerText">Our Team</div>
         </div>
         <div class="container">
-            <div class="memberName"><h2>Tim Oliver  – Recruiter / Senior Partner, CPC</h2></div>
+            <div class="memberName"><h3>Tim Oliver  – Recruiter / Senior Partner, CPC</h3></div>
             <div class="member row">
                 <div class="col s4">
                     <img class="memberImage z-depth-5" src="./public/images/Tim.jpeg" />
@@ -141,7 +141,7 @@ let aboutHTML = `
                     </div>
                 </div>
             </div>
-            <div class="memberName"><h2>Dave Buergler – Recruiter / Senior Partner</h2></div>
+            <div class="memberName"><h3>Dave Buergler – Recruiter / Senior Partner</h3></div>
             <div class="member row">
                 <div class="col s4">
                 <img class="memberImage z-depth-5" src="./public/images/Dave.png" />
@@ -152,7 +152,7 @@ let aboutHTML = `
                     </div>
                 </div>
             </div>
-            <div class="memberName"><h2>Joel Oliver – Senior Recruiter</h2></div>
+            <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
             <div class="member row">
                 <div class="col s4">
                     <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
@@ -182,14 +182,14 @@ let contactHTML = `
                     <img class="contactImage" src="./public/images/contact_us.png" />
                 </div>
                 <div class="contactOSI col s8">
-                    <div class="memberName"><h2>Tim Oliver  – Recruiter / Senior Partner, CPC</h2></div>
+                    <div class="memberName"><h3>Tim Oliver  – Recruiter / Senior Partner, CPC</h3></div>
                     <div class="member row">
                         <div class="col s4">
                             <img class="memberImage z-depth-5" src="./public/images/Tim.jpeg" />
                         </div>
                         <div class="memberDescription col s8">
                             <div>
-                                <a href="mailto:tim@osijobs.com target="blank">Email Tim</a>
+                                <p></p><a href="mailto:tim@osijobs.com target="blank">Email Tim</a></p>
                                 <p>P.O. Box 401</p>
                                 <p>Lake Hartwell, Georgia</p>
                                 <p>Phone: 770.760.7661</p>
@@ -197,14 +197,14 @@ let contactHTML = `
                             </div>
                         </div>
                     </div>
-                    <div class="memberName"><h2>Dave Buergler – Recruiter / Senior Partner</h2></div>
+                    <div class="memberName"><h3>Dave Buergler – Recruiter / Senior Partner</h3></div>
                     <div class="member row">
                         <div class="col s4">
                         <img class="memberImage z-depth-5" src="./public/images/Dave.png" />
                         </div>
                         <div class="memberDescription col s8">
                             <div>
-                                <a href="mailto:dave@osijobs.com target="blank">Email Dave</a>
+                                <p></p><a href="mailto:dave@osijobs.com target="blank">Email Dave</a></p>
                                 <p>Apex, NC</p>
                                 <p>Phone: 919-779-0833</p>
                                 <p>Fax: 919-307-4942</p>
@@ -212,14 +212,14 @@ let contactHTML = `
                             </div>
                         </div>
                     </div>
-                    <div class="memberName"><h2>Joel Oliver – Senior Recruiter</h2></div>
+                    <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
                     <div class="member row">
                         <div class="col s4">
                             <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
                         </div>
                         <div class="memberDescription col s8">
                             <div>
-                                <a href="mailto:joel@osijobs.com target="blank">Email Joel</a>
+                                <p></p><a href="mailto:joel@osijobs.com target="blank">Email Joel</a></p>
                                 <p>Winchester, VA</p>
                                 <p>Phone: 770-883-2214</p>
                                 <p><a href="http://www.linkedin.com/in/joeltoliver">Linkedin</a></p>

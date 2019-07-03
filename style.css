@@ -1,7 +1,7 @@
 html{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom:75px;
-    font-size:1.5vh;
+    font-size:1.5vw !important;
     background: url("./public/images/background.jpg")
 }
 
@@ -10,11 +10,20 @@ h3{
 }
 
 p{
-    font-size: 1.5vh;
+    font-size: 1.5vw;
 }
 
 .navBar .main .footer{
     width:100%;
+}
+
+.navOptions{
+    font-size: 1.5vw !important; 
+}
+
+.dropdownOptions{
+    font-size:1.5vw !important;
+    display:block;
 }
 
 @font-face {
@@ -30,6 +39,7 @@ p{
 
 .OSIJobs{
     padding-left:30px;
+    font-size:1.5vw !important;
 }
 
 .social{ 
@@ -68,7 +78,7 @@ z-index:100000 !important;
         display:visible;
     }
     h1{
-        font-size: 3vh;
+        font-size: 3vw;
     }
     h2{
         font-size:2vw;
