@@ -350,22 +350,21 @@ $.ajax({
     url: "https://loxo.co/api/osi-jobs/jobs",
     type: "GET",
     beforeSend: function(xhr) {
-        xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=');
-
-        xhr.setRequestHeader('Content-type', 'multipart/form-data');
-
-
+        xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')
     }, 
+    data:{
+        "job_status_id":2841
+    },
     dataType: 'json', 
     xhrFields: {
         withCredentials: true
       },
     success: function(data) {
-        console.log(data)
+        // console.log(data)
         var items = [];
         $.each( data.results, (i)=> {
-            console.log(data.results[i])
-        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a></li>`);
+            // console.log(datas.results[i])
+        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}(${data.results[i].macro_address})</a></li>`);
         });
    
         $( "<ul/>", {
