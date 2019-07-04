@@ -364,7 +364,7 @@ $.ajax({
         var items = [];
         $.each( data.results, (i)=> {
             // console.log(datas.results[i])
-        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">-${data.results[i].title}</a>(${data.results[i].macro_address})</li>`);
+        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">-${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
         });
    
         $( `<ul/>`, {
