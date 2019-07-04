@@ -364,10 +364,10 @@ $.ajax({
         var items = [];
         $.each( data.results, (i)=> {
             // console.log(datas.results[i])
-        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}(${data.results[i].macro_address})</a></li>`);
+        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">-${data.results[i].title}</a>(${data.results[i].macro_address})</li>`);
         });
    
-        $( "<ul/>", {
+        $( `<ul/>`, {
         "class": "my-new-list",
         html: items.join( "" )
         }).appendTo( "#loxoResponse" );
