@@ -345,6 +345,17 @@ let ventureCapitalPartnershipHTML = `
 //==================================END OF HTML TO BE INJECTED================================
 //==================================AJAX REQUEST FOR LOXO JOBS================================
 
+Array.prototype.shuffle = function() {
+  var i = this.length, j, temp;
+  if ( i == 0 ) return this;
+  while ( --i ) {
+     j = Math.floor( Math.random() * ( i + 1 ) );
+     temp = this[i];
+     this[i] = this[j];
+     this[j] = temp;
+  }
+  return this;
+}
 
 $.ajax({
     url: "https://loxo.co/api/osi-jobs/jobs",
@@ -362,13 +373,15 @@ $.ajax({
     success: function(data) {
         // console.log(data)
         var items = [];
-        $.each( data.results, (i)=> {
+        for(let i=0;i<9;i++) {
             // console.log(datas.results[i])
-        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">-${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
-        });
-   
+            items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
+        };
+        
+        items.shuffle();
+
         $( `<ul/>`, {
-        "class": "my-new-list",
+        "class": "bullet-content",
         html: items.join( "" )
         }).appendTo( "#loxoResponse" );
     },
@@ -437,4 +450,3 @@ $(document).ready(()=> {
     //     $(main).html(jobListingsHTML)
     // })
 })
-
