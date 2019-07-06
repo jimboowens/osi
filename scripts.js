@@ -65,7 +65,7 @@ let mainHTML=`
                 <h3>Excellence in Food Industry Executive Recruitment</h3>
                 <div>
                     <ul>
-                        OSI is a 20+ year-old search firm that specializes in the retained and contingency recruitment of food industry professionals.
+                        OSI is a 25+ year-old search firm that specializes in the retained and contingency recruitment of food industry professionals.
                         The firm's Senior Partners each hold MS degrees in Food Science and have significant food industry experience.
                     </ul>
                 </div> <br>
