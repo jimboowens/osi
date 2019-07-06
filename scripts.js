@@ -345,31 +345,46 @@ let ventureCapitalPartnershipHTML = `
 //==================================END OF HTML TO BE INJECTED================================
 //==================================AJAX REQUEST FOR LOXO JOBS================================
 
+// prototype function to shuffle response array from loxo
+Array.prototype.shuffle = function() {
+  let i = this.length, j, placeHolder;
+  if ( i == 0 ) return this;
+  while ( --i ) {
+     j = Math.floor( Math.random() * ( i + 1 ) );
+     placeHolder = this[i];
+     this[i] = this[j];
+     this[j] = placeHolder;
+  }
+  return this;
+}
 
 $.ajax({
     url: "https://loxo.co/api/osi-jobs/jobs",
     type: "GET",
-    beforeSend: function(xhr) {
-        xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')
-    }, 
-    data:{
-        "job_status_id":2841
-    },
-    dataType: 'json', 
-    xhrFields: {
-        withCredentials: true
-      },
-    success: function(data) {
-        // console.log(data)
-        var items = [];
-        $.each( data.results, (i)=> {
-            // console.log(datas.results[i])
-        items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">-${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
+    // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support. 
+    // this might get changed at some point if and when this basic auth expires, but emailing support is the only way I know of to get it.
+    beforeSend: xhr=> {xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')},
+    // this is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
+    // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
+    // they are the weakest of sauce.
+    data:{"job_status_id":2841},
+    // my guess is this sidesteps the username and password requirement.
+    xhrFields: {withCredentials: true},
+    success: data=> {
+        // console.log(`data received is: ${data}`)
+        let items = [];
+        $.each( data.results, i=> {
+            // console.log(data.results[i])
+            items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
         });
-   
+        // shuffle items so they aren't alphabetical
+        items.shuffle();
+        //truncate list to make more consistent with other two columns in div
+        itemsFinal = items.slice(0,10);
+        // push final items array to html for view on homepage
         $( `<ul/>`, {
-        "class": "my-new-list",
-        html: items.join( "" )
+        "class": "bullet-content",
+        html: itemsFinal.join( "" )
         }).appendTo( "#loxoResponse" );
     },
 });
@@ -437,4 +452,3 @@ $(document).ready(()=> {
     //     $(main).html(jobListingsHTML)
     // })
 })
-
