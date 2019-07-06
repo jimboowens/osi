@@ -413,7 +413,7 @@ $(document).ready(()=> {
         $("#panel").slideToggle("slow")
         $(".your-class").slideToggle("slow")
     })
-    //click handlers for links 
+    //===================click handlers for links  ===================
     
     // $(OSIJobs).click(()=>{
     //     $(main).html(mainHTML)
