@@ -31,7 +31,7 @@ let navBarHTML=`
         </Job>
     </nav>
 `
-//================================MAIN CONTENT, THIS HTML IS REPLACED ONCLICK EVENTS================================
+//====================MAIN CONTENT, THIS HTML IS REPLACED ONCLICK EVENTS====================
 
 let mainHTML=`
     <div class="your-class"><div class="sliderImage"></div></div><div class="container"></div></div>
@@ -98,22 +98,22 @@ let mainHTML=`
 `
 //======================================END MAIN HTML CONTENT=================================
 let footerHTML = `
-<nav class="nav-wrapper blue darken-4 hide-on-med-and-down footer">
-    <ul>
-        <li><a class="OSIJobs waves-effect" href="/">OSI Jobs</a></li>
-        <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
-        <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
-        <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
-    </ul>
-    <ul>
-        <li>© 2019 All Rights Reserved</li>
-    </ul>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="waves-effect navOptions"><div class="about">About Us</div></div></a></li>
-        <li><a class="waves-effect navOptions"><div class="contact">Contact</div></a></li>
-        <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs">Job Listings</a></li>
-    </ul>
-</nav>
+    <nav class="nav-wrapper blue darken-4 hide-on-med-and-down footer">
+        <ul>
+            <li><a class="OSIJobs waves-effect" href="/">OSI Jobs</a></li>
+            <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
+            <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
+            <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
+        </ul>
+        <ul>
+            <li>© 2019 All Rights Reserved</li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="waves-effect navOptions"><div class="about">About Us</div></div></a></li>
+            <li><a class="waves-effect navOptions"><div class="contact">Contact</div></a></li>
+            <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs">Job Listings</a></li>
+        </ul>
+    </nav>
 `
 //================================END OF ONLOAD HTML INJECTIONS================================
 //=============================START OF ONCLICK HTML TO BE INJECTED============================
@@ -155,7 +155,7 @@ let aboutHTML = `
             <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
             <div class="member row">
                 <div class="col s4">
-                    <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
+                    <img class="memberImage z-depth-5" src="./public/images/Joel(1).png" />
                 </div>
                 <div class="memberDescription col s8">
                     <div>
@@ -343,20 +343,22 @@ let ventureCapitalPartnershipHTML = `
 // <div class="contactPage">job listings</div>
 // `
 //==================================END OF HTML TO BE INJECTED================================
-//==================================AJAX REQUEST FOR LOXO JOBS================================
 
 // prototype function to shuffle response array from loxo
+
 Array.prototype.shuffle = function() {
-  let i = this.length, j, placeHolder;
-  if ( i == 0 ) return this;
-  while ( --i ) {
-     j = Math.floor( Math.random() * ( i + 1 ) );
-     placeHolder = this[i];
-     this[i] = this[j];
-     this[j] = placeHolder;
+  let i=this.length,j,placeHolder;
+  if (i==0)return this;
+  while(--i){
+     j=Math.floor(Math.random()*(i+1));
+     placeHolder=this[i];
+     this[i]=this[j];
+     this[j]=placeHolder;
   }
   return this;
 }
+
+//==================================AJAX REQUEST FOR LOXO JOBS================================
 
 $.ajax({
     url: "https://loxo.co/api/osi-jobs/jobs",
@@ -382,9 +384,9 @@ $.ajax({
         //truncate list to make more consistent with other two columns in div
         itemsFinal = items.slice(0,10);
         // push final items array to html for view on homepage
-        $( `<ul/>`, {
-        "class": "bullet-content",
-        html: itemsFinal.join( "" )
+        $(`<ul/>`,{
+        "class":"bullet-content",
+        html:itemsFinal.join(``)
         }).appendTo( "#loxoResponse" );
     },
 });
