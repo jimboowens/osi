@@ -215,7 +215,7 @@ let contactHTML = `
                     <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
                     <div class="member row">
                         <div class="col s4">
-                            <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
+                            <img class="memberImage z-depth-5" src="./public/images/Joel(1).png" />
                         </div>
                         <div class="memberDescription col s8">
                             <div>
