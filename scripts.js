@@ -4,6 +4,8 @@ let navBar = document.querySelector('.navBar')
 let main = document.querySelector('.main')
 let footer = document.querySelector('.footer')
 
+console.log("this is a work of Jim Owens. Find me at jimowens.dev")
+
 //================================START OF HTML TO BE INJECTED================================
 //========================================HTML ON LOAD========================================
 let navBarHTML=`
@@ -15,20 +17,20 @@ let navBarHTML=`
             <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="waves-effect navOptions"><div class="about">About Us</div></div></a></li>
-            <li><a class="waves-effect navOptions"><div class="contact">Contact Us</div></a></li>
-            <li><a class="waves-effect navOptions"><div class="employerServices">Employer Services</div></a></li>
-            <li><a class="waves-effect navOptions"><div class="ventureCapitalPartnership">Venture Capital Partnership</div></a></li>
-            <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
+            <li><a class="waves-effect navOptions about">About Us</a></li>
+            <li><a class="waves-effect navOptions contact">Contact Us</a></li>
+            <li><a class="waves-effect navOptions employerServices">Employer Services</a></li>
+            <li><a class="waves-effect navOptions ventureCapitalPartnership">Venture Capital Partnership</a></li>
+            <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs">Job Listings</a></li>
         </ul>
         <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div>
-        <div id="panel" class="blue darken-4 show-on-med-and-down">
-            <a class="waves-effect dropdownOptions"><div class="about">About Us</div></a>
-            <a class="waves-effect dropdownOptions"><div class="contact">Contact Us</div></a>
-            <a class="waves-effect dropdownOptions"><div class="employerServices">Employer Services</div></a>
-            <a class="waves-effect dropdownOptions"><div class="ventureCapitalPartnership">Venture Capial Partnership</div></a>
-            <a class="waves-effect dropdownOptions" href="https://loxo.co/osi-jobs">Job Listings</a>
-        </Job>
+        <div id="panel" class="col s4 offset-s8 show-on-med-and-down">
+            <a class="waves-effect dropdownOptions blue darken-4 about">About Us</a>
+            <a class="waves-effect dropdownOptions blue darken-4 contact">Contact Us</a>
+            <a class="waves-effect dropdownOptions blue darken-4 employerServices">Employer Services</a>
+            <a class="waves-effect dropdownOptions blue darken-4 ventureCapitalPartnership">Venture Capial Partnership</a>
+            <a class="waves-effect dropdownOptions blue darken-4" href="https://loxo.co/osi-jobs">Job Listings</a>
+        </div>
     </nav>
 `
 //====================MAIN CONTENT, THIS HTML IS REPLACED ONCLICK EVENTS====================
@@ -109,8 +111,8 @@ let footerHTML = `
             <li>© 2019 All Rights Reserved</li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="waves-effect navOptions"><div class="about">About Us</div></div></a></li>
-            <li><a class="waves-effect navOptions"><div class="contact">Contact</div></a></li>
+            <li><a class="waves-effect navOptions about">About Us</a></li>
+            <li><a class="waves-effect navOptions contact">Contact</a></li>
             <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs">Job Listings</a></li>
         </ul>
     </nav>
@@ -164,7 +166,7 @@ let aboutHTML = `
                 </div>
             </div>
             <div>
-            We are a member of <a href="https://www.Bio-Partners.com" target="_blank" rel="noopener noreferrer">Bio-Partners</a> It’s a consortium of highly experienced, successful recruiters specializing in key talent. In pharmaceutical, biotech/life sciences, medical device, bioinformatics, information technology, & healthcare corporations.
+            We are a member of <a href="https://southeast-recruiters.com" target="_blank" rel="noopener noreferrer">Bio-Partners</a> It’s a consortium of highly experienced, successful recruiters specializing in key talent. In pharmaceutical, biotech/life sciences, medical device, bioinformatics, information technology, & healthcare corporations.
             </div>
         </div>
     </div>
@@ -329,7 +331,7 @@ let ventureCapitalPartnershipHTML = `
                         </ul>
                         <p>Within the following disciplines:</p>
                         <p>Sales. Marketing. Manufacturing. Operations. Engineering. Purchasing. Supply Chain. Logistics. R&D. QA. Food Safety. Technical Services. Maintenance. Accounting. HR. etc...</p>
-                        <p>If you are a private equity or venture capital firm, feel free <a href="mailto:joel@osijobs.com,tim@osijobs.com,dave@osijobs.com">contact us</a> to discuss how we can maximize the success of your company. We are here to help with your venture capital executive search.</p>
+                        <p>If you are a private equity or venture capital firm, feel free <a href="mailto:joel@osijobs.com,tim@osijobs.com,dave@osijobs.com">Contact Us</a> to discuss how we can maximize the success of your company. We are here to help with your venture capital executive search.</p>
                     </div>
                 </div>
             </div>
@@ -366,9 +368,9 @@ $.ajax({
     // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support. 
     // this might get changed at some point if and when this basic auth expires, but emailing support is the only way I know of to get it.
     beforeSend: xhr=> {xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')},
-    // this is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
+    // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
     // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
-    // they are the weakest of sauce.
+    // be warned-- they are the weakest of sauce.
     data:{"job_status_id":2841},
     // my guess is this sidesteps the username and password requirement.
     xhrFields: {withCredentials: true},
@@ -377,20 +379,20 @@ $.ajax({
         let items = [];
         $.each( data.results, i=> {
             // console.log(data.results[i])
+            // this builds out the list items in the jobs column of the main content.
             items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
         });
-        // shuffle items so they aren't alphabetical
-        items.shuffle();
+        // shuffle items in the list so they aren't alphabetical based on the number of items in the list
+        items.shuffle()
         //truncate list to make more consistent with other two columns in div
-        itemsFinal = items.slice(0,10);
+        itemsFinal = items.slice(0,10)
         // push final items array to html for view on homepage
         $(`<ul/>`,{
         "class":"bullet-content",
         html:itemsFinal.join(``)
-        }).appendTo( "#loxoResponse" );
+        }).appendTo( "#loxoResponse" )
     },
-});
-// <a href="https://loxo.co/job/251748">Supplier Quality Manager</a>
+})
 //================================INJECTION OF HTML ONLOAD================================
 $(navBar).html(navBarHTML)
 $(main).html(mainHTML)
@@ -427,8 +429,8 @@ $(document).ready(()=> {
     slickSlideStart
     //dropdown menu toggle
     $("#dropdown").click(()=>{
-        $("#panel").slideToggle("slow")
-        $(".your-class").slideToggle("slow")
+        $("#panel").toggle()
+        // $(".your-class").slideToggle("slow")
     })
     //===================click handlers for links  ===================
     
@@ -440,7 +442,6 @@ $(document).ready(()=> {
         $(main).html(aboutHTML)
     })
     $(".contact").click(()=>{
-        console.log("contact")
         $(main).html(contactHTML)
     })
     $(".employerServices").click(()=>{

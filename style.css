@@ -2,8 +2,13 @@ html{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom:75px;
     font-size:1.5vw !important;
-    background: url("./public/images/background.jpg")
+    background: url("./public/images/background.jpg");
+    overflow-x: hidden;
+    overflow-y:scroll;
+    background-color:#0D47A1;
 }
+
+
 
 h3{
     font-size: 1.75vw;
@@ -22,8 +27,8 @@ p{
 }
 
 .dropdownOptions{
-    font-size:1.5vw !important;
     display:block;
+    padding:15px;
 }
 
 @font-face {
@@ -120,7 +125,6 @@ z-index:100000 !important;
 }
 
 .sliderText{
-    /* margin-left:-15vw; */
     padding-top:8vh;
     width:50vw;
 }
@@ -130,15 +134,15 @@ z-index:100000 !important;
     list-style-type: circle !important;
 }
 
-.footer {
+.footer{
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
-    border-radius: 10px;
-  }
+    border-radius: 10px 10px 0 0;
+}
 
 .headerDiv{
     border-radius: 10px;
