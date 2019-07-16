@@ -4,6 +4,8 @@ let navBar = document.querySelector('.navBar')
 let main = document.querySelector('.main')
 let footer = document.querySelector('.footer')
 
+console.log("this is a work of Jim Owens. Find me at jimowens.dev")
+
 //================================START OF HTML TO BE INJECTED================================
 //========================================HTML ON LOAD========================================
 let navBarHTML=`
@@ -15,23 +17,23 @@ let navBarHTML=`
             <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="waves-effect navOptions"><div class="about">About Us</div></div></a></li>
-            <li><a class="waves-effect navOptions"><div class="contact">Contact Us</div></a></li>
-            <li><a class="waves-effect navOptions"><div class="employerServices">Employer Services</div></a></li>
-            <li><a class="waves-effect navOptions"><div class="ventureCapitalPartnership">Venture Capital Partnership</div></a></li>
-            <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs"><div>Job Listings</div></a></li>
+            <li><a class="waves-effect navOptions about">About Us</a></li>
+            <li><a class="waves-effect navOptions contact">Contact Us</a></li>
+            <li><a class="waves-effect navOptions employerServices">Employer Services</a></li>
+            <li><a class="waves-effect navOptions ventureCapitalPartnership">Venture Capital Partnership</a></li>
+            <li><a class="waves-effect navOptions jobListings" >Job Listings</a></li>
         </ul>
         <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div>
-        <div id="panel" class="blue darken-4 show-on-med-and-down">
-            <a class="waves-effect dropdownOptions"><div class="about">About Us</div></a>
-            <a class="waves-effect dropdownOptions"><div class="contact">Contact Us</div></a>
-            <a class="waves-effect dropdownOptions"><div class="employerServices">Employer Services</div></a>
-            <a class="waves-effect dropdownOptions"><div class="ventureCapitalPartnership">Venture Capial Partnership</div></a>
-            <a class="waves-effect dropdownOptions" href="https://loxo.co/osi-jobs">Job Listings</a>
-        </Job>
+        <div id="panel" class="col s4 offset-s8 show-on-med-and-down">
+            <a class="waves-effect dropdownOptions blue darken-4 about">About Us</a>
+            <a class="waves-effect dropdownOptions blue darken-4 contact">Contact Us</a>
+            <a class="waves-effect dropdownOptions blue darken-4 employerServices">Employer Services</a>
+            <a class="waves-effect dropdownOptions blue darken-4 ventureCapitalPartnership">Venture Capial Partnership</a>
+            <a class="waves-effect dropdownOptions blue darken-4 jogListings" >Job Listings</a>
+        </div>
     </nav>
 `
-//================================MAIN CONTENT, THIS HTML IS REPLACED ONCLICK EVENTS================================
+//====================MAIN CONTENT, THIS HTML IS REPLACED ONCLICK EVENTS====================
 
 let mainHTML=`
     <div class="your-class"><div class="sliderImage"></div></div><div class="container"></div></div>
@@ -65,7 +67,7 @@ let mainHTML=`
                 <h3>Excellence in Food Industry Executive Recruitment</h3>
                 <div>
                     <ul>
-                        OSI is a 20+ year-old search firm that specializes in the retained and contingency recruitment of food industry professionals.
+                        OSI is a 25+ year-old search firm that specializes in the retained and contingency recruitment of food industry professionals.
                         The firm's Senior Partners each hold MS degrees in Food Science and have significant food industry experience.
                     </ul>
                 </div> <br>
@@ -98,22 +100,22 @@ let mainHTML=`
 `
 //======================================END MAIN HTML CONTENT=================================
 let footerHTML = `
-<nav class="nav-wrapper blue darken-4 hide-on-med-and-down footer">
-    <ul>
-        <li><a class="OSIJobs waves-effect" href="/">OSI Jobs</a></li>
-        <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
-        <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
-        <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
-    </ul>
-    <ul>
-        <li>© 2019 All Rights Reserved</li>
-    </ul>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class="waves-effect navOptions"><div class="about">About Us</div></div></a></li>
-        <li><a class="waves-effect navOptions"><div class="contact">Contact</div></a></li>
-        <li><a class="waves-effect navOptions" href="https://loxo.co/osi-jobs">Job Listings</a></li>
-    </ul>
-</nav>
+    <nav class="nav-wrapper blue darken-4 hide-on-med-and-down footer">
+        <ul>
+            <li><a class="OSIJobs waves-effect" href="/">OSI Jobs</a></li>
+            <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
+            <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
+            <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
+        </ul>
+        <ul>
+            <li>© 2019 All Rights Reserved</li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="waves-effect navOptions about">About Us</a></li>
+            <li><a class="waves-effect navOptions contact">Contact</a></li>
+            <li><a class="waves-effect navOptions jobListings" >Job Listings</a></li>
+        </ul>
+    </nav>
 `
 //================================END OF ONLOAD HTML INJECTIONS================================
 //=============================START OF ONCLICK HTML TO BE INJECTED============================
@@ -137,7 +139,7 @@ let aboutHTML = `
                 </div>
                 <div class="memberDescription col s8">
                     <div>
-                    Tim has been recruiting in the food industry for 20+ years. He previously held office level positions with two other nationwide search firms before starting OSI, his own company of food industry recruiters, in 1992.&nbsp;Tim has BS &amp; MS&nbsp;degrees in Food Science from the University of Georgia. He worked in R&amp;D for a Fortune 500 company and a Production Supervisor for a major food processor. He is a Certified Personnel Consultant as awarded by the National Association of Personnel Services.
+                    Tim has been recruiting in the food industry for 25+ years. He previously held office level positions with two other nationwide search firms before starting OSI, his own company of food industry recruiters, in 1992.&nbsp;Tim has BS &amp; MS&nbsp;degrees in Food Science from the University of Georgia. He worked in R&amp;D for a Fortune 500 company and a Production Supervisor for a major food processor. He is a Certified Personnel Consultant as awarded by the National Association of Personnel Services.
                     </div>
                 </div>
             </div>
@@ -148,14 +150,14 @@ let aboutHTML = `
                 </div>
                 <div class="memberDescription col s8">
                     <div>
-                    Dave has BS and MS degrees from the University of Missouri. He has 20+ years of industry experience. Dave started his career as a Food Technologist for a Fortune 500 company. Then he moved into the area of Sensory/Marketing Research. Dave then joined a large foodservice company as Senior Manager of Marketing Research. He eventually held Director-level positions in New Product Marketing, Brand Management, and Field Marketing. Dave took his background and experience to the team of food industry recruiters in 1998.
+                    Dave has BS and MS degrees from the University of Missouri. He has 25+ years of industry experience. Dave started his career as a Food Technologist for a Fortune 500 company. Then he moved into the area of Sensory/Marketing Research. Dave then joined a large foodservice company as Senior Manager of Marketing Research. He eventually held Director-level positions in New Product Marketing, Brand Management, and Field Marketing. Dave took his background and experience to the team of food industry recruiters in 1998.
                     </div>
                 </div>
             </div>
             <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
             <div class="member row">
                 <div class="col s4">
-                    <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
+                    <img class="memberImage z-depth-5" src="./public/images/Joel(1).png" />
                 </div>
                 <div class="memberDescription col s8">
                     <div>
@@ -164,7 +166,7 @@ let aboutHTML = `
                 </div>
             </div>
             <div>
-            We are a member of <a href="https://www.Bio-Partners.com" target="_blank" rel="noopener noreferrer">Bio-Partners</a> It’s a consortium of highly experienced, successful recruiters specializing in key talent. In pharmaceutical, biotech/life sciences, medical device, bioinformatics, information technology, & healthcare corporations.
+            We are a member of <a href="https://southeast-recruiters.com" target="_blank" rel="noopener noreferrer">Bio-Partners</a>. It’s a consortium of highly experienced, successful recruiters specializing in key talent. In pharmaceutical, biotech/life sciences, medical device, bioinformatics, information technology, & healthcare corporations.
             </div>
         </div>
     </div>
@@ -215,7 +217,7 @@ let contactHTML = `
                     <div class="memberName"><h3>Joel Oliver – Senior Recruiter</h3></div>
                     <div class="member row">
                         <div class="col s4">
-                            <img class="memberImage z-depth-5" src="./public/images/Joel.png" />
+                            <img class="memberImage z-depth-5" src="./public/images/Joel(1).png" />
                         </div>
                         <div class="memberDescription col s8">
                             <div>
@@ -329,7 +331,7 @@ let ventureCapitalPartnershipHTML = `
                         </ul>
                         <p>Within the following disciplines:</p>
                         <p>Sales. Marketing. Manufacturing. Operations. Engineering. Purchasing. Supply Chain. Logistics. R&D. QA. Food Safety. Technical Services. Maintenance. Accounting. HR. etc...</p>
-                        <p>If you are a private equity or venture capital firm, feel free <a href="mailto:joel@osijobs.com,tim@osijobs.com,dave@osijobs.com">contact us</a> to discuss how we can maximize the success of your company. We are here to help with your venture capital executive search.</p>
+                        <p>If you are a private equity or venture capital firm, feel free <a href="mailto:joel@osijobs.com,tim@osijobs.com,dave@osijobs.com">Contact Us</a> to discuss how we can maximize the success of your company. We are here to help with your venture capital executive search.</p>
                     </div>
                 </div>
             </div>
@@ -339,24 +341,36 @@ let ventureCapitalPartnershipHTML = `
 `
 
 //redirect to loxo, but in the future event there's a local page, this is where the HTML would be injected
-// let jobListingsHTML = `
-// <div class="contactPage">job listings</div>
-// `
+let jobListingsHTML = `
+    <div class="jobListingsPage">
+        <div class="headerDiv blue darken-4">
+            <div class="headerText">
+                Job Listings
+            </div>
+        </div>
+            <div class="container">
+                <h3>Here is a list of available jobs we have, listed alphabetically:</h3>
+                <div id="jobListingsResponse"></div>
+            </div>
+    </div>
+`
 //==================================END OF HTML TO BE INJECTED================================
-//==================================AJAX REQUEST FOR LOXO JOBS================================
 
 // prototype function to shuffle response array from loxo
+
 Array.prototype.shuffle = function() {
-  let i = this.length, j, placeHolder;
-  if ( i == 0 ) return this;
-  while ( --i ) {
-     j = Math.floor( Math.random() * ( i + 1 ) );
-     placeHolder = this[i];
-     this[i] = this[j];
-     this[j] = placeHolder;
+  let i=this.length,j,placeHolder;
+  if (i==0)return this;
+  while(--i){
+     j=Math.floor(Math.random()*(i+1));
+     placeHolder=this[i];
+     this[i]=this[j];
+     this[j]=placeHolder;
   }
   return this;
 }
+
+//==================================AJAX REQUEST FOR LOXO JOBS================================
 
 $.ajax({
     url: "https://loxo.co/api/osi-jobs/jobs",
@@ -364,9 +378,9 @@ $.ajax({
     // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support. 
     // this might get changed at some point if and when this basic auth expires, but emailing support is the only way I know of to get it.
     beforeSend: xhr=> {xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')},
-    // this is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
+    // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
     // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
-    // they are the weakest of sauce.
+    // be warned-- they are the weakest of sauce.
     data:{"job_status_id":2841},
     // my guess is this sidesteps the username and password requirement.
     xhrFields: {withCredentials: true},
@@ -375,20 +389,21 @@ $.ajax({
         let items = [];
         $.each( data.results, i=> {
             // console.log(data.results[i])
+            // this builds out the list items in the jobs column of the main content.
             items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
         });
-        // shuffle items so they aren't alphabetical
-        items.shuffle();
+
+        // shuffle items in the list so they aren't alphabetical based on the number of items in the list
+        items.shuffle()
         //truncate list to make more consistent with other two columns in div
-        itemsFinal = items.slice(0,10);
+        let itemsFinalForHomePage = items.slice(0,10)
         // push final items array to html for view on homepage
-        $( `<ul/>`, {
-        "class": "bullet-content",
-        html: itemsFinal.join( "" )
-        }).appendTo( "#loxoResponse" );
+        $(`<ul/>`,{
+        "class":"bullet-content",
+        html:itemsFinalForHomePage.join(``)
+        }).appendTo( "#loxoResponse" )
     },
-});
-// <a href="https://loxo.co/job/251748">Supplier Quality Manager</a>
+})
 //================================INJECTION OF HTML ONLOAD================================
 $(navBar).html(navBarHTML)
 $(main).html(mainHTML)
@@ -425,10 +440,10 @@ $(document).ready(()=> {
     slickSlideStart
     //dropdown menu toggle
     $("#dropdown").click(()=>{
-        $("#panel").slideToggle("slow")
-        $(".your-class").slideToggle("slow")
+        $("#panel").toggle()
+        // $(".your-class").slideToggle("slow")
     })
-    //click handlers for links 
+    //===================click handlers for links  ===================
     
     // $(OSIJobs).click(()=>{
     //     $(main).html(mainHTML)
@@ -438,7 +453,6 @@ $(document).ready(()=> {
         $(main).html(aboutHTML)
     })
     $(".contact").click(()=>{
-        console.log("contact")
         $(main).html(contactHTML)
     })
     $(".employerServices").click(()=>{
@@ -448,7 +462,34 @@ $(document).ready(()=> {
         $(main).html(ventureCapitalPartnershipHTML)
     })
     //redirect to loxo, but in the future event there's a local page, this is where the click handler is
-    // $(".jobListings").click(()=>{
-    //     $(main).html(jobListingsHTML)
-    // })
+    $(".jobListings").click(()=>{
+        $(main).html(jobListingsHTML)
+        $.ajax({
+            url: "https://loxo.co/api/osi-jobs/jobs",
+            type: "GET",
+            // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support. 
+            // this might get changed at some point if and when this basic auth expires, but emailing support is the only way I know of to get it.
+            beforeSend: xhr=> {xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')},
+            // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
+            // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
+            // be warned-- they are the weakest of sauce.
+            data:{"job_status_id":2841},
+            // my guess is this sidesteps the username and password requirement.
+            xhrFields: {withCredentials: true},
+            success: data=> {
+                console.log(data.results)
+                let items = [];
+                $.each(data.results, i=> {
+                    // console.log(data.results[i])
+                    // this builds out the list items in the jobs column of the main content.
+                    items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
+                });
+                // push items array to html for view on job listings page
+                $(`<ul/>`,{
+                "class":"bullet-content",
+                html:items.join(``)
+                }).appendTo( "#jobListingsResponse" )
+            },
+        })
+    })
 })
