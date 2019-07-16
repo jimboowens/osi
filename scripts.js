@@ -477,7 +477,7 @@ $(document).ready(()=> {
             // my guess is this sidesteps the username and password requirement.
             xhrFields: {withCredentials: true},
             success: data=> {
-                console.log(data.results)
+                // console.log(data.results)
                 let items = [];
                 $.each(data.results, i=> {
                     // console.log(data.results[i])
