@@ -139,7 +139,7 @@ let aboutHTML = `
                 </div>
                 <div class="memberDescription col s8">
                     <div>
-                    Tim has been recruiting in the food industry for 20+ years. He previously held office level positions with two other nationwide search firms before starting OSI, his own company of food industry recruiters, in 1992.&nbsp;Tim has BS &amp; MS&nbsp;degrees in Food Science from the University of Georgia. He worked in R&amp;D for a Fortune 500 company and a Production Supervisor for a major food processor. He is a Certified Personnel Consultant as awarded by the National Association of Personnel Services.
+                    Tim has been recruiting in the food industry for 25+ years. He previously held office level positions with two other nationwide search firms before starting OSI, his own company of food industry recruiters, in 1992.&nbsp;Tim has BS &amp; MS&nbsp;degrees in Food Science from the University of Georgia. He worked in R&amp;D for a Fortune 500 company and a Production Supervisor for a major food processor. He is a Certified Personnel Consultant as awarded by the National Association of Personnel Services.
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@ let aboutHTML = `
                 </div>
                 <div class="memberDescription col s8">
                     <div>
-                    Dave has BS and MS degrees from the University of Missouri. He has 20+ years of industry experience. Dave started his career as a Food Technologist for a Fortune 500 company. Then he moved into the area of Sensory/Marketing Research. Dave then joined a large foodservice company as Senior Manager of Marketing Research. He eventually held Director-level positions in New Product Marketing, Brand Management, and Field Marketing. Dave took his background and experience to the team of food industry recruiters in 1998.
+                    Dave has BS and MS degrees from the University of Missouri. He has 25+ years of industry experience. Dave started his career as a Food Technologist for a Fortune 500 company. Then he moved into the area of Sensory/Marketing Research. Dave then joined a large foodservice company as Senior Manager of Marketing Research. He eventually held Director-level positions in New Product Marketing, Brand Management, and Field Marketing. Dave took his background and experience to the team of food industry recruiters in 1998.
                     </div>
                 </div>
             </div>
