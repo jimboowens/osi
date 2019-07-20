@@ -29,7 +29,7 @@ let navBarHTML=`
             <a class="waves-effect dropdownOptions blue darken-4 contact">Contact Us</a>
             <a class="waves-effect dropdownOptions blue darken-4 employerServices">Employer Services</a>
             <a class="waves-effect dropdownOptions blue darken-4 ventureCapitalPartnership">Venture Capial Partnership</a>
-            <a class="waves-effect dropdownOptions blue darken-4 jogListings" >Job Listings</a>
+            <a class="waves-effect dropdownOptions blue darken-4 jobListings" >Job Listings</a>
         </div>
     </nav>
 `
