@@ -166,7 +166,7 @@ let aboutHTML = `
                 </div>
             </div>
             <div>
-            We are a member of <a href="https://southeast-recruiters.com" target="_blank" rel="noopener noreferrer">Bio-Partners</a>. It’s a consortium of highly experienced, successful recruiters specializing in key talent. In pharmaceutical, biotech/life sciences, medical device, bioinformatics, information technology, & healthcare corporations.
+                We are a member of <a href="https://southeast-recruiters.com" target="_blank" rel="noopener noreferrer">Bio-Partners</a>. It’s a consortium of highly experienced, successful recruiters specializing in key talent. In pharmaceutical, biotech/life sciences, medical device, bioinformatics, information technology, & healthcare corporations.
             </div>
         </div>
     </div>
