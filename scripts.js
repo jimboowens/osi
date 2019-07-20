@@ -449,24 +449,24 @@ $(document).ready(()=> {
     //     slickSlideStart
     // })
     $(".about").click(()=>{
-        window.history.pushState('page2', 'Title', '/about-us')
+        window.history.pushState(null, 'Title', '/about-us')
         $(main).html(aboutHTML)
     })
     $(".contact").click(()=>{
-        window.history.pushState('page2', 'Title', '/contact-us')
+        window.history.pushState(null, 'Title', '/contact-us')
         $(main).html(contactHTML)
     })
     $(".employerServices").click(()=>{
-        window.history.pushState('page2', 'Title', '/employer-services')
+        window.history.pushState(null, 'Title', '/employer-services')
         $(main).html(employerServicesHTML)
     })
     $(".ventureCapitalPartnership").click(()=>{
-        window.history.pushState('page2', 'Title', '/venture-capital-partnership')
+        window.history.pushState(null, 'Title', '/venture-capital-partnership')
         $(main).html(ventureCapitalPartnershipHTML)
     })
     //redirect to loxo, but in the future event there's a local page, this is where the click handler is
     $(".jobListings").click(()=>{
-        window.history.pushState('page2', 'Title', '/job-listings')
+        window.history.pushState(null, 'Title', '/job-listings')
         $(main).html(jobListingsHTML)
         $.ajax({
             url: "https://loxo.co/api/osi-jobs/jobs",
