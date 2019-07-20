@@ -206,7 +206,7 @@ let contactHTML = `
                         </div>
                         <div class="memberDescription col s8">
                             <div>
-                                <p></p><a href="mailto:dave@osijobs.com" target="blank">Email Dave</a></p>
+                                <p><a href="mailto:dave@osijobs.com" target="blank">Email Dave</a></p>
                                 <p>Apex, NC</p>
                                 <p>Phone: 919-779-0833</p>
                                 <p>Fax: 919-307-4942</p>
@@ -221,7 +221,7 @@ let contactHTML = `
                         </div>
                         <div class="memberDescription col s8">
                             <div>
-                                <p></p><a href="mailto:joel@osijobs.com" target="blank">Email Joel</a></p>
+                                <p><a href="mailto:joel@osijobs.com" target="blank">Email Joel</a></p>
                                 <p>Winchester, VA</p>
                                 <p>Phone: 770-883-2214</p>
                                 <p><a href="http://www.linkedin.com/in/joeltoliver">Linkedin</a></p>
