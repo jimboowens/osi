@@ -464,35 +464,23 @@ $(document).ready(()=> {
         window.history.pushState(null, 'Title', '/venture-capital-partnership')
         $(main).html(ventureCapitalPartnershipHTML)
     })
-    //redirect to loxo, but in the future event there's a local page, this is where the click handler is
     $(".jobListings").click(()=>{
         window.history.pushState(null, 'Title', '/job-listings')
         $(main).html(jobListingsHTML)
+        // please refer to previous loxo ajax request for info; this one is a simpler version
         $.ajax({
             url: "https://loxo.co/api/osi-jobs/jobs",
             type: "GET",
-            // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support. 
-            // this might get changed at some point if and when this basic auth expires, but emailing support is the only way I know of to get it.
             beforeSend: xhr=> {xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')},
-            // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
-            // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
-            // be warned-- they are the weakest of sauce.
             data:{"job_status_id":2841},
-            // my guess is this sidesteps the username and password requirement.
             xhrFields: {withCredentials: true},
             success: data=> {
-                // console.log(data.results)
                 let items = [];
-                $.each(data.results, i=> {
-                    // console.log(data.results[i])
-                    // this builds out the list items in the jobs column of the main content.
-                    items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
-                });
-                // push items array to html for view on job listings page
+                $.each(data.results, i=> items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`));
                 $(`<ul/>`,{
                 "class":"bullet-content",
                 html:items.join(``)
-                }).appendTo( "#jobListingsResponse" )
+                }).appendTo("#jobListingsResponse")
             },
         })
     })
