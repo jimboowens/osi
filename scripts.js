@@ -191,7 +191,7 @@ let contactHTML = `
                         </div>
                         <div class="memberDescription col s8">
                             <div>
-                                <p></p><a href="mailto:tim@osijobs.com target="blank">Email Tim</a></p>
+                                <p></p><a href="mailto:tim@osijobs.com" target="blank">Email Tim</a></p>
                                 <p>P.O. Box 401</p>
                                 <p>Lake Hartwell, Georgia</p>
                                 <p>Phone: 770.760.7661</p>
