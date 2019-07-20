@@ -4,7 +4,7 @@ let navBar = document.querySelector('.navBar')
 let main = document.querySelector('.main')
 let footer = document.querySelector('.footer')
 
-console.log(`this is a work of Jim Owens. Find me at jimowens.dev`)
+console.log(`this is a work of Jim Owens. Find me at jimowens.dev, or github.com/jimboowens`)
 
 //================================START OF HTML TO BE INJECTED================================
 //========================================HTML ON LOAD========================================
