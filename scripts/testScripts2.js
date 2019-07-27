@@ -3,7 +3,7 @@ let test2HTML = document.querySelector('html')
 let test2BODY = document.querySelector("body")
 
 let testPage2HTML=`
-    <nav class="grey lighten-2 z-depth-5 testNavBar">
+    <nav class="z-depth-5 test2NavBar">
         <ul>
             <li><a class="OSIJobs waves-effect waves-light" href="/">OSI Jobs</a></li>
             <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
@@ -11,11 +11,11 @@ let testPage2HTML=`
             <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="waves-effect waves-light navOptions about">About Us</a></li>
-            <li><a class="waves-effect waves-light navOptions contact">Contact Us</a></li>
-            <li><a class="waves-effect waves-light navOptions employerServices">Employer Services</a></li>
-            <li><a class="waves-effect waves-light navOptions ventureCapitalPartnership">Venture Capital Partnership</a></li>
-            <li><a class="waves-effect waves-light navOptions jobListings" >Job Listings</a></li>
+            <li><a class="waves-effect waves-light navOptions about">About</a></li>
+            <li><a class="waves-effect waves-light navOptions contact">Contact</a></li>
+            <li><a class="waves-effect waves-light navOptions employerServices">Services</a></li>
+            <li><a class="waves-effect waves-light navOptions ventureCapitalPartnership">Partnerships</a></li>
+            <li><a class="waves-effect waves-light navOptions jobListings">Jobs</a></li>
         </ul>
         <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div>
         <div id="panel" class="col s4 offset-s8 show-on-med-and-down">
@@ -30,8 +30,8 @@ let testPage2HTML=`
     <div class="parallax">
         <div id="group1" class="parallax_group">
             <div class="parallax_layer parallax_layer--base z-depth-5">
-                <div class="title">
-                    <h1>Medical Device Recruiting</h1>
+                <div class="title mainTitle">
+                    <h1 class="TestText">Medical Device Recruiting</h1>
                 </div>
             </div>
         </div>
@@ -93,7 +93,11 @@ $(document).ready(()=>{
         $(main).html('')
         $(navBar).html('')
         $(footer).html('')
-        $(test2HTML).css({"overflow":"hidden"})
+        $(test2HTML).css({
+            "overflow":"hidden",
+            "color":"#C6DABF",
+            "background-color":"#062F4F",
+        })
         $(test2BODY).css({
             "overflow":"hidden",
             "font":"100%",
@@ -102,5 +106,18 @@ $(document).ready(()=>{
             "margin":"0",
             // "padding":"0",
         })
+        $(".navOptions").hover(
+            function(){
+                $(this).css({
+                    "border-bottom":"2px solid #062F4F",
+                    "transform":"scale(1.2)",
+                })
+            },function(){
+                $(this).css({
+                    "border-bottom":"none",
+                    "transform":"scale(1)",
+                })
+            }
+        )
     })
 })
