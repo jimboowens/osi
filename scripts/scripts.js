@@ -23,7 +23,8 @@ let navBarHTML=`
             <li><a class="waves-effect navOptions contact">Contact Us</a></li>
             <li><a class="waves-effect navOptions employerServices">Employer Services</a></li>
             <li><a class="waves-effect navOptions ventureCapitalPartnership">Venture Capital Partnership</a></li>
-            <li><a class="waves-effect navOptions jobListings" >Job Listings</a></li>
+            <li><a class="waves-effect navOptions jobListings">Job Listings</a></li>
+            <li><a class="waves-effect navOptions medicalDeviceRecruiting">Medical Device Recruiting</a></li>
         </ul>
         <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div>
         <div id="panel" class="col s4 offset-s8 show-on-med-and-down">
@@ -355,6 +356,20 @@ let jobListingsHTML = `
             </div>
     </div>
 `
+
+let medicalDeviceRecruitingHTML = `
+    <div class="MedicalDeviceRecruitingPage">
+        <div class="headerDiv blue darken-4">
+            <div class="headerText">
+                Medical Device Recruiting
+            </div>
+        </div>
+            <div class="container">
+                <h3>This page is under construction</h3>
+            </div>
+    </div>
+`
+
 //==================================END OF HTML TO BE INJECTED================================
 
 // prototype function to shuffle response array from loxo
@@ -485,5 +500,9 @@ $(document).ready(()=> {
                 }).appendTo("#jobListingsResponse")
             },
         })
+    })
+    $(".medicalDeviceRecruiting").click(()=>{
+        window.history.pushState(null, 'Title', '/medical-device-recruiting')
+        $(main).html(medicalDeviceRecruitingHTML)
     })
 })

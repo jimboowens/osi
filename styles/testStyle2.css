@@ -1,8 +1,6 @@
-.testPage2Link{
+/* .testPage2Link{
     color:red;
-}
-
-
+} */
 
 /* Parallax base styles
 --------------------------------------------- */
@@ -16,7 +14,7 @@
     perspective: 300px;
     }
     
-    .parallax__group {
+    .parallax_group {
     position: relative;
     /* height: 500px; fallback for older browsers */
     height: 100vh;
@@ -24,7 +22,7 @@
     transform-style: preserve-3d;
     }
     
-    .parallax__layer {
+    .parallax_layer {
     position: absolute;
     top: 0;
     left: 0;
@@ -32,50 +30,30 @@
     bottom: 0;
     }
     
-    .parallax__layer--fore {
+    .parallax_layer--fore {
     -webkit-transform: translateZ(90px) scale(.7);
     transform: translateZ(90px) scale(.7);
     z-index: 1;
     height:50vh;
     }
     
-    .parallax__layer--base {
+    .parallax_layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
     }
     
-    .parallax__layer--back {
+    .parallax_layer--back {
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-300px) scale(2);
     z-index: 3;
     }
     
-    .parallax__layer--deep {
+    .parallax_layer--deep {
     -webkit-transform: translateZ(-600px) scale(3);
     transform: translateZ(-600px) scale(3);
     z-index: 2;
     }
-    
-    
-    /* Debugger styles - used to show the effect
-    --------------------------------------------- */
-    
-    /* demo styles
-    --------------------------------------------- */
-    
-    /* body, html {
-    overflow: hidden;
-    }
-    
-    body {
-    font: 100% / 1.5 Arial;
-    }
-    
-    * {
-    margin:0;
-    padding:0;
-    } */
     
     .parallax {
     font-size: 200%;
@@ -91,65 +69,66 @@
     transform: translate(-50%, -50%);
     }
     
-    
-    
     /* style the groups
     --------------------------------------------- */
     
     #group1 {
     z-index: 5; /* slide over group 2 */
     }
-    #group1 .parallax__layer--base {
-    background: rgb(102,204,102);
+    #group1 .parallax_layer--base {
+        background: linear-gradient(rgba(79, 209, 209, 0.3), rgb(6, 47, 79,.8)), url('../public/images/test-background-5.jpg');
+        background-size: cover;
     }
     
     #group2 {
     z-index: 3; /* slide under groups 1 and 3 */
     }
-    #group2 .parallax__layer--back {
-    background: rgb(123,210,102);
+    #group2 .parallax_layer--back {
+        background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/test-background-3.jpg');
+        background-size:cover;
     }
     
     #group3 {
-    z-index: 4; /* slide over group 2 and 4 */
+    z-index: 4; /* slide over groups 2 and 4 */
     }
-    #group3 .parallax__layer--base {
-    background: rgb(153,216,101);
+    #group3 .parallax_layer--base {
+    background: white;
     }
     
     #group4 {
-    z-index: 2; /* slide under group 3 and 5 */
+    z-index: 2; /* slide under groups 3 and 5 */
     }
-    #group4 .parallax__layer--deep {
+    #group4 .parallax_layer--deep {
         background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/test-background-2.jpg');
         background-size: cover;
     }
     
     #group5 {
-    z-index: 3; /* slide over group 4 and 6 */
+    z-index: 3; /* slide over groups 4 and 6 */
     }
-    #group5 .parallax__layer--base {
-    background: rgb(214,229,100);
+    #group5 .parallax_layer--base {
+    background: white;
     }
     
     #group6 {
-    z-index: 2; /* slide under group 5 and 7 */
+    z-index: 2; /* slide under groups 5 and 7 */
     }
-    #group6 .parallax__layer--back {
-    background: rgb(245,235,100);
+    #group6 .parallax_layer--back {
+        background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/test-background-4.jpg');
+        background-size:cover;
     }
     
     #group7 {
     z-index: 3; /* slide over group 7 */
     }
-    #group7 .parallax__layer--base {
-    background: rgb(255,241,100);
+    #group7 .parallax_layer--base {
+    background: white;
     }
     
     
     /* misc
     --------------------------------------------- */
-    .demo__info {
+    .demo_info {
     position: absolute;
     z-index:100;
     bottom: 1vh;

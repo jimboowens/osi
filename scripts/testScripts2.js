@@ -28,56 +28,58 @@ let testPage2HTML=`
     </nav>
     `+`
     <div class="parallax">
-        <div id="group1" class="parallax__group">
-            <div class="parallax__layer parallax__layer--base">
-                <div class="title">Base Layer 1</div>
+        <div id="group1" class="parallax_group">
+            <div class="parallax_layer parallax_layer--base z-depth-5">
+                <div class="title">
+                    <h1>Medical Device Recruiting</h1>
+                </div>
             </div>
         </div>
-        <div id="group2" class="parallax__group">
-            <div class="parallax__layer parallax__layer--base">
+        <div id="group2" class="parallax_group">
+            <div class="parallax_layer parallax_layer--base">
                 <div class="title">Base Layer 2</div>
             </div>
-            <div class="parallax__layer parallax__layer--back">
+            <div class="parallax_layer parallax_layer--back">
                 <div class="title">Background Layer</div>
             </div>
         </div>
-        <div id="group3" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-                <div class="title">Foreground Layer</div>
+        <div id="group3" class="parallax_group">
+            <div class="parallax_layer parallax_layer--fore">
+                <div class="title">Foreground Layer 1</div>
             </div>
-            <div class="parallax__layer parallax__layer--base">
+            <div class="parallax_layer parallax_layer--base">
                 <div class="title">Base Layer 3</div>
             </div>
         </div>
-        <div id="group4" class="parallax__group">
-            <div class="parallax__layer parallax__layer--base">
+        <div id="group4" class="parallax_group">
+            <div class="parallax_layer parallax_layer--base">
                 <div class="title">Base Layer 4</div>
             </div>
-            <div class="parallax__layer parallax__layer--back">
-                <div class="title">Background Layer</div>
+            <div class="parallax_layer parallax_layer--back">
+                <div class="title">Background Layer </div>
             </div>
-            <div class="parallax__layer parallax__layer--deep">
+            <div class="parallax_layer parallax_layer--deep">
                 <div class="title">Deep Background Layer</div>
             </div>
         </div>
-        <div id="group5" class="parallax__group">
-            <div class="parallax__layer parallax__layer--fore">
-                <div class="title">Foreground Layer</div>
+        <div id="group5" class="parallax_group">
+            <div class="parallax_layer parallax_layer--fore">
+                <div class="title">Foreground Layer 2</div>
             </div>
-            <div class="parallax__layer parallax__layer--base">
+            <div class="parallax_layer parallax_layer--base">
                 <div class="title">Base Layer 5</div>
             </div>
         </div>
-        <div id="group6" class="parallax__group">
-            <div class="parallax__layer parallax__layer--back">
+        <div id="group6" class="parallax_group">
+            <div class="parallax_layer parallax_layer--back">
                 <div class="title">Background Layer</div>
             </div>
-            <div class="parallax__layer parallax__layer--base">
+            <div class="parallax_layer parallax_layer--base">
                 <div class="title">Base Layer 6</div>
             </div>
         </div>
-        <div id="group7" class="parallax__group">
-            <div class="parallax__layer parallax__layer--base">
+        <div id="group7" class="parallax_group">
+            <div class="parallax_layer parallax_layer--base">
                 <div class="title">Base Layer 7</div>
             </div>
         </div>
@@ -98,23 +100,7 @@ $(document).ready(()=>{
         })
         $("*").css({
             "margin":"0",
-            "padding":"0",
+            // "padding":"0",
         })
-
-
-
-
-        /* body, html {
-    overflow: hidden;
-    }
-    
-    body {
-    font: 100% / 1.5 Arial;
-    }
-    
-    * {
-    margin:0;
-    padding:0;
-    } */
     })
 })
