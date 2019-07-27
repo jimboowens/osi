@@ -76,7 +76,7 @@
     z-index: 5; /* slide over group 2 */
     }
     #group1 .parallax_layer--base {
-        background: linear-gradient(rgba(79, 209, 209, 0.3), rgb(6, 47, 79,.8)), url('../public/images/test-background-5.jpg');
+    background: white;
         background-size: cover;
     }
     
@@ -92,7 +92,7 @@
     z-index: 4; /* slide over groups 2 and 4 */
     }
     #group3 .parallax_layer--base {
-    background: white;
+        background: linear-gradient(rgba(79, 209, 209, 0.3), rgb(6, 47, 79,.8)), url('../public/images/test-background-5.jpg');
     }
     
     #group4 {
