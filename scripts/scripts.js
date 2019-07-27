@@ -15,6 +15,7 @@ let navBarHTML=`
             <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
             <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
             <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
+            <li><a class="testClass testPageLink">.</a></il>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="waves-effect navOptions about">About Us</a></li>
