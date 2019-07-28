@@ -5,10 +5,11 @@ let test2BODY = document.querySelector("body")
 let testPage2HTML=`
     <nav class="z-depth-5 test2NavBar">
         <ul>
-            <li><a class="OSIJobs waves-effect waves-light" href="/">OSI Jobs</a></li>
+            <li><a class="OSIJobs waves-effect waves-light navOptions" href="/">OSI Jobs</a></li>
             <li><a class="social facebook" href="http://www.facebook.com/pages/OSI/314041371978411" target="blank">f</a></li>
             <li><a class="social linkedIn" href="http://www.linkedin.com/company/2497623" target="blank">i</a></li>
             <li><a class="social twitter" href="http://twitter.com/osifoodjobs" target="blank">l</a></li>
+            
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="waves-effect waves-light navOptions about">About</a></li>
@@ -32,6 +33,7 @@ let testPage2HTML=`
             <div class="parallax_layer parallax_layer--base z-depth-5">
                 <div class="title mainTitle">
                     <h1 class="TestText">Medical Device Recruiting</h1>
+                    <h3>Leading the way in Medical Staffing Innovation</h3>
                 </div>
             </div>
         </div>
@@ -84,6 +86,9 @@ let testPage2HTML=`
             </div>
         </div>
     </div>
+`+`
+
+
 `
 
 $(document).ready(()=>{
@@ -108,15 +113,9 @@ $(document).ready(()=>{
         })
         $(".navOptions").hover(
             function(){
-                $(this).css({
-                    "border-bottom":"2px solid #062F4F",
-                    "transform":"scale(1.2)",
-                })
+                $(this).css("transform","scale(1.2)")
             },function(){
-                $(this).css({
-                    "border-bottom":"none",
-                    "transform":"scale(1)",
-                })
+                $(this).css("transform","scale(1)")
             }
         )
     })
