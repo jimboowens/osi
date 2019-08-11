@@ -7,6 +7,7 @@ html{
     scroll-behavior: smooth;
     height: auto;
     min-height: 100%;
+    color: #F3E9D2
 }
 
 @font-face {
@@ -129,7 +130,7 @@ z-index:100000 !important;
     left: 0;
     bottom: 0;
     width: 100%;
-    color: white;
+    color: #F3E9D2;
     text-align: center;
     border-radius: 10px 10px 0 0;
 }
@@ -139,7 +140,7 @@ z-index:100000 !important;
     margin:25px;
     /* border-left:-25px;
     border-right:-25px; */
-    color:white;
+    color:#F3E9D2;
 }
 
 .headerText{
@@ -260,16 +261,22 @@ z-index:100000 !important;
 }
 /* style the groups
 --------------------------------------------- */
-
+/* ----------------page 1-------------------- */
 #splash {
     z-index: 5; /* slide over group 2 */
 }
+
 #splash .parallax_layer--base {
-    background: linear-gradient(rgba(79, 209, 209, 0.3), rgb(6, 47, 79)), url('../public/images/test-background-5.jpg');
+    /* background: linear-gradient(rgba(79, 209, 209, 0.3), rgb(6, 47, 79)), url('../public/images/test-background-5.jpg'); */
+    background:#1A936F,url('../public/images/test-background-5.jpg');
+    background-repeat:no-repeat;
+    background-size: 50% 100%;
+    background-position: left top, right top;
     border-bottom:2px solid #C6DABF;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
+/* ----------------page 2-------------------- */
 #about {
     z-index: 3; /* slide under groups 1 and 3 */
 }
@@ -278,6 +285,7 @@ z-index:100000 !important;
     background-size:cover;
 }
 
+/* ----------------page 3-------------------- */
 #jobs {
     z-index: 4; /* slide over groups 2 and 4 */
 }
@@ -285,14 +293,16 @@ z-index:100000 !important;
     background: #F3E9D2;
 }
 
-#services {
+/* ----------------page 4-------------------- */
+#recruiting {
     z-index: 2; /* slide under groups 3 and 5 */
 }
-#services .parallax_layer--deep {
+#recruiting .parallax_layer--deep {
     background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/test-background-2.jpg');
     background-size: cover;
 }
 
+/* ----------------page 5-------------------- */
 #partnerships {
     z-index: 3; /* slide over groups 4 and 6 */
 }
@@ -300,14 +310,16 @@ z-index:100000 !important;
     background: #F3E9D2;
 }
 
-#recruiting {
+/* ----------------page 6-------------------- */
+#services {
     z-index: 2; /* slide under groups 5 and 7 */
 }
-#recruiting .parallax_layer--back {
+#services .parallax_layer--back {
     background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/test-background-4.jpg');
     background-size:cover;
 }
 
+/* ----------------page 7-------------------- */
 #contact {
 z-index: 3; /* slide over group 7 */
 }
@@ -331,16 +343,19 @@ background: #F3E9D2;
 /* new additions */
 
 
-.testText{
+.splashHeader{
     /* text-shadow: horizontal-offset vertical-offset blur color; */
-    background-color: #F3E9D2;
+    border-bottom: 2px solid #F3E9D2;
 }
 
 .mainTitle{
     text-align:left;
-    text-shadow: 2px 2px #1A936F;
-    color: #062F4F;
+    color: #F3E9D2;
     /* background-image: linear-gradient(to left, rgba(79, 209, 209, 0.8), #F3E9D2); */
+}
+
+.darkText{
+    color:#062F4F;
 }
 
 .navOptions {

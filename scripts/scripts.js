@@ -14,9 +14,9 @@ let mainHTML=`
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="waves-effect waves-light navOptions" href="#about">About</a></li>
             <li><a class="waves-effect waves-light navOptions" href="#jobs">Jobs</a></li>
-            <li><a class="waves-effect waves-light navOptions" href="#services">Services</a></li>
-            <li><a class="waves-effect waves-light navOptions" href="#partnerships">Partnerships</a></li>
             <li><a class="waves-effect waves-light navOptions" href="#recruiting">Medical Recruiting</a></li>
+            <li><a class="waves-effect waves-light navOptions" href="#partnerships">Partnerships</a></li>
+            <li><a class="waves-effect waves-light navOptions" href="#services">Services</a></li>
             <li><a class="waves-effect waves-light navOptions" href="#contact">Contact</a></li>
         </ul>
         <div id="dropdown" class="show-on-med-and-down"><a>Menu</a></div>
@@ -33,8 +33,8 @@ let mainHTML=`
         <div id="splash" class="parallax_group">
             <div class="parallax_layer parallax_layer--base z-depth-5">
                 <div class="title mainTitle">
-                    <h1 class="TestText">Medical Device Recruiting</h1>
-                    <h3>Leading the way in Medical Staffing Innovation</h3>
+                    <h1 class="splashHeader">OSI Jobs</h1>
+                    <h3>Simplifying Staffing in the Food Industry for over 25 years</h3>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@ let mainHTML=`
                 <div class="title">Background Layer</div>
             </div>
         </div>
-        <div id="jobs" class="parallax_group">
+        <div id="jobs" class="parallax_group darkText">
             <div class="parallax_layer parallax_layer--fore">
                 <div class="title">Foreground Layer 1</div>
             </div>
@@ -54,7 +54,7 @@ let mainHTML=`
                 <div class="title">Base Layer 3</div>
             </div>
         </div>
-        <div id="services" class="parallax_group">
+        <div id="recruiting" class="parallax_group">
             <div class="parallax_layer parallax_layer--base">
                 <div class="title">Base Layer 4</div>
             </div>
@@ -65,7 +65,7 @@ let mainHTML=`
                 <div class="title">Deep Background Layer</div>
             </div>
         </div>
-        <div id="partnerships" class="parallax_group">
+        <div id="partnerships" class="parallax_group darkText">
             <div class="parallax_layer parallax_layer--fore">
                 <div class="title">Foreground Layer 2</div>
             </div>
@@ -73,7 +73,7 @@ let mainHTML=`
                 <div class="title">Base Layer 5</div>
             </div>
         </div>
-        <div id="recruiting" class="parallax_group">
+        <div id="services" class="parallax_group">
             <div class="parallax_layer parallax_layer--back">
                 <div class="title">Background Layer</div>
             </div>
@@ -81,7 +81,7 @@ let mainHTML=`
                 <div class="title">Base Layer 6</div>
             </div>
         </div>
-        <div id="contact" class="parallax_group">
+        <div id="contact" class="parallax_group darkText">
             <div class="parallax_layer parallax_layer--fore">
                 <div class="title">Foreground Layer 3</div>
             </div>
