@@ -267,11 +267,8 @@ z-index:100000 !important;
 }
 
 #splash .parallax_layer--base {
-    /* background: linear-gradient(rgba(79, 209, 209, 0.3), rgb(6, 47, 79)), url('../public/images/test-background-5.jpg'); */
-    background:#1A936F,url('../public/images/test-background-5.jpg');
-    background-repeat:no-repeat;
-    background-size: 50% 100%;
-    background-position: left top, right top;
+    background: linear-gradient(rgba(79, 209, 209, 0.3), rgb(6, 47, 79)), url('../public/images/test-background-5.jpg');
+    /* background:#1A936F,url('../public/images/test-background-5.jpg'); */
     border-bottom:2px solid #C6DABF;
     /* background-size: cover; */
 }
