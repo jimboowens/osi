@@ -37,7 +37,7 @@ let mainHTML=`
                     <h3>Simplifying Staffing in the Food Industry for over 25 years</h3>
                 </div>
                 <div>
-                    <img class="z-depth-5 splashImage right" src="./public/images/licensed/waiting_room.jpg" />
+                    <img class="z-depth-5 splashImage right" src="./public/images/licensed/waiting_room.JPG" />
                 </div>
             </div>
         </div>
