@@ -32,9 +32,12 @@ let mainHTML=`
     <div class="parallax">
         <div id="splash" class="parallax_group">
             <div class="parallax_layer parallax_layer--base z-depth-5">
-                <div class="title mainTitle">
+                <div class="title mainTitle left">
                     <h1 class="splashHeader">OSI Jobs</h1>
                     <h3>Simplifying Staffing in the Food Industry for over 25 years</h3>
+                </div>
+                <div>
+                    <img class="z-depth-5 splashImage right" src="./public/images/licensed/waiting_room.jpg" />
                 </div>
             </div>
         </div>
