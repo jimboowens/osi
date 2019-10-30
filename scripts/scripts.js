@@ -129,6 +129,5 @@ setTimeout(() => {
     }, 2985);
 
 $(document).ready(()=>{
-  
-    
+  console.log('ready');
 })
