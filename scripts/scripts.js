@@ -36,30 +36,16 @@ let mainHTML= `
             <div class="parallax_layer parallax_layer--base z-depth-5">
                 <div class="title mainTitle left">
                     <h1 class="splashHeader">OSI Jobs</h1>
-                    <h3>Simplifying Staffing in the Food Industry for over 25 years</h3>
+                    <h3>Excellence in Food Industry Recruitment</h3>
                 </div>
                 <div>
-                    <img class="z-depth-5 splashImage right" src="./public/images/licensed/waiting_room.JPG" />
+                    <img class="z-depth-5 splashImage right" src="./public/images/licensed/waiting_room_table_focus_2.JPG" />
                 </div>
             </div>
         </div>
         <div id="about" class="parallax_group">
             <div class="parallax_layer parallax_layer--base">
                 <div class="title aboutBaseTitle imageClass">
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
                     <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
                 </div>
             </div>

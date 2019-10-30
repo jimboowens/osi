@@ -129,6 +129,7 @@ body{
     }
     50% {
       top: 40%;
+      background: #1A936F;
     }
     100% {
       top: 50%;
@@ -138,7 +139,7 @@ body{
   
   @keyframes materia {
     0% {
-      background: #039be5;
+      background: #1A936F;
     }
     50% {
       background: #062F4F;
@@ -426,7 +427,7 @@ z-index:100 !important;
 .mainTitle{
     text-align:left;
     color: #062F4F;
-    left:35%;
+    left:40%;
     top:75%;
     /* background-image: linear-gradient(to left, rgba(79, 209, 209, 0.8), #F3E9D2); */
 }
@@ -436,12 +437,12 @@ z-index:100 !important;
     z-index: 3; /* slide under groups 1 and 3 */
 }
 #about .parallax_layer--back {
-    background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/licensed/waiting_room_landscape_2.JPG');
+    background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/licensed/brewers_landscape.jpg');
     background-size:cover;
 }
 
 .aboutBaseTitle{
-    left:20%;
+    left:30%;
 }
 
 .aboutBackgroundTitle{
