@@ -39,7 +39,7 @@ let mainHTML= `
                     <h3>Excellence in Food Industry Recruitment</h3>
                 </div>
                 <div>
-                    <img class="z-depth-5 splashImage right" src="./public/images/licensed/waiting_room_table_focus_2.JPG" />
+                    <img class="z-depth-5 splashImage right" src="./public/images/people_in_market.jpg" />
                 </div>
             </div>
         </div>
