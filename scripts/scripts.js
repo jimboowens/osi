@@ -1,6 +1,5 @@
-let main = document.querySelector('.main')
-let windowHTML = document.querySelector('html')
-let mainBODY = document.querySelector("body")
+let main = document.querySelector('.main');
+let mainBODY = document.querySelector("body");
 
 let navBarHTML=` 
     <nav class="z-depth-5 navBar">
@@ -28,7 +27,7 @@ let navBarHTML=`
             <a class="waves-effect waves-light dropdownOptions" href="#contact">Contact</a>
         </div>
     </nav>
-`
+`;
 
 let mainHTML= `   
     <div class="parallax">
@@ -45,12 +44,28 @@ let mainHTML= `
         </div>
         <div id="about" class="parallax_group">
             <div class="parallax_layer parallax_layer--base">
-                <div class="title aboutBaseTitle imageClass">
-                    <img class="aboutImage z-depth-5" src="./public/images/licensed/meals/zucchini_into_plate.JPG" />
+                <div class="title aboutBaseTitle">
+                </div>
+                <div class="col s12 m4 aboutRightBody">
+                    <h5>New Jobs:</h5>
+                    <div id="loxoResponse"></div>
                 </div>
             </div>
             <div class="parallax_layer parallax_layer--back">
-                <div class="title aboutBackgroundTitle">Background Layer</div>
+                <div class="aboutLeftBody">
+                    <div class="">
+                        <h5 class="center">Excellence in Food Industry Recruitment</h5>
+                        <p>At OSI, we specialize in food industry executive recruitment. Whether you are an employer looking for the perfect candidate, or you a food industry professional looking to make a change, feel free to take a look around.<br></p>
+                    </div>
+                    <div class="">
+                        <h5 class="center">We fill the following types of positions</h5>
+                        <p>Operations/Manufacturing • Purchasing/Supply Chain • Research & Development • Quality Assurance • Sales (National/Regional/DSD) • Engineering/Maintenance • CEO, CFO, COO, GM • Project Management • Customer Service • Food Safety • Distribution/Logistics Management • Sanitation<br></p>
+                    </div>
+                    <div class="">
+                        <h5 class="center">Our Mission Statement:</h5>
+                        <p>Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="jobs" class="parallax_group darkText">
@@ -97,9 +112,26 @@ let mainHTML= `
             </div>
         </div>
     </div>
-`
-      
-$(main).html(mainHTML)
+`;
+
+//==================================END OF HTML TO BE INJECTED================================
+
+// prototype function to shuffle response array from loxo
+
+Array.prototype.shuffle = function() {
+    let i=this.length,j,placeHolder;
+    if (i==0) return this;
+    while(--i){
+       j=Math.floor(Math.random()*(i+1));
+       placeHolder=this[i];
+       this[i]=this[j];
+       this[j]=placeHolder;
+    }
+    return this;
+  }
+
+  
+$(main).html(mainHTML);
 
 setTimeout(() => {
     $(".ball").css({
@@ -126,7 +158,42 @@ setTimeout(() => {
                 })
             }
         )
-    }, 2985);
+    }, 3100);
+
+//==================================AJAX REQUEST FOR LOXO JOBS================================
+
+$.ajax({
+    url: "https://loxo.co/api/osi-jobs/jobs",
+    type: "GET",
+    // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support. 
+    // this might get changed at some point if and when this basic auth expires, but emailing support is the only way I know of to get it.
+    beforeSend: xhr=> {xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')},
+    // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
+    // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
+    // be warned-- they are the weakest of sauce.
+    data:{"job_status_id":2841},
+    // this sidesteps the username and password requirement.
+    xhrFields: {withCredentials: true},
+    success: data=> {
+        console.log(data.results);
+        let items = [];
+        $.each( data.results, i=> {
+            // console.log(data.results[i])
+            // this builds out the list items in the jobs column of the main content.
+            items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
+        });
+
+        // shuffle items in the list so they aren't alphabetical based on the number of items in the list
+        items.shuffle()
+        //truncate list to make more consistent with other two columns in div
+        let itemsFinalForHomePage = items.slice(0,10)
+        // push final items array to html for view on homepage
+        $(`<ul/>`,{
+        "class":"bullet-content",
+        html:itemsFinalForHomePage.join(``)
+        }).appendTo( "#loxoResponse" )
+    },
+})
 
 $(document).ready(()=>{
   console.log('ready');
