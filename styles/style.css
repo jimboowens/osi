@@ -468,18 +468,6 @@ z-index:100 !important;
     left:80%;
 }
 
-.aboutLeftBody{
-    padding-top:20vh;
-    width:50%;
-    padding-left:1vw;
-}
-
-.aboutRightBody{
-    margin-left:60%;
-    padding-right:1vw;
-    padding-top:20vh;
-}
-
 /* ----------------page 3-------------------- */
 #jobs {
     z-index: 4; /* slide over groups 2 and 4 */
@@ -495,6 +483,18 @@ z-index:100 !important;
 
 .jobsBaseTitle{
     left:80%;
+}
+
+.jobsLeftBody{
+    padding-top:20vh;
+    width:50%;
+    padding-left:1vw;
+}
+
+.jobsRightBody{
+    margin-left:60%;
+    padding-right:1vw;
+    padding-top:20vh;
 }
 
 /* ----------------page 4-------------------- */

@@ -44,15 +44,24 @@ let mainHTML= `
         </div>
         <div id="about" class="parallax_group">
             <div class="parallax_layer parallax_layer--base">
-                <div class="title aboutBaseTitle">
-                </div>
-                <div class="col s12 m4 aboutRightBody">
-                    <h5>New Jobs:</h5>
-                    <div id="loxoResponse"></div>
-                </div>
+                <div class="title aboutBaseTitle">Base Layer</div>
             </div>
             <div class="parallax_layer parallax_layer--back">
-                <div class="aboutLeftBody">
+                <div class="title aboutBackgroundTitle">Background Layer</div>
+            </div>
+        </div>
+        <div id="jobs" class="parallax_group darkText">
+            <div class="parallax_layer parallax_layer--fore">
+                <div class="title jobsForegroundTitle">  
+            </div>  
+            <div class="col s12 m4 jobsRightBody">
+                <h5>New Jobs:</h5>
+                <div id="loxoResponse"></div>
+            </div>
+            </div>
+            <div class="parallax_layer parallax_layer--base">
+                <div class="title jobsBaseTitle"></div>
+                <div class="jobsLeftBody">
                     <div class="">
                         <h5 class="center">Excellence in Food Industry Recruitment</h5>
                         <p>At OSI, we specialize in food industry executive recruitment. Whether you are an employer looking for the perfect candidate, or you a food industry professional looking to make a change, feel free to take a look around.<br></p>
@@ -66,14 +75,6 @@ let mainHTML= `
                         <p>Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="jobs" class="parallax_group darkText">
-            <div class="parallax_layer parallax_layer--fore">
-                <div class="title jobsForegroundTitle">Foreground Layer 1</div>
-            </div>
-            <div class="parallax_layer parallax_layer--base">
-                <div class="title jobsBaseTitle">Base Layer 3</div>
             </div>
         </div>
         <div id="recruiting" class="parallax_group">
