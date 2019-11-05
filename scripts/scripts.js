@@ -162,6 +162,9 @@ let mainHTML= `
                 <div>
                     <p>OSI, a group of food industry recruiters, was established in 1992 and currently operates offices in Georgia, North Carolina, and Northern Virginia. OSI is a member of and adheres to all ethics and standards of the Georgia Association of Personnel Services. Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</p>
                 </div>
+                <div>
+                    We are a member of <a href="https://southeast-recruiters.com" target="_blank" rel="noopener noreferrer">Bio-Partners</a>. It’s a consortium of highly experienced, successful recruiters specializing in key talent. In pharmaceutical, biotech/life sciences, medical device, bioinformatics, information technology, & healthcare corporations.
+                </div>
             </div>
         </div>
     </div>
