@@ -43,25 +43,48 @@ let mainHTML= `
             </div>
         </div>
         <div id="about" class="parallax_group">
-            <div class="parallax_layer parallax_layer--base">
-                <div class="title aboutBaseTitle">Base Layer</div>
+            <h4 class="aboutTitle">About Us</h4>
+            <div class="parallax_layer parallax_layer--base aboutLeftBody">
+                <div>
+                    <img class="memberImage" src="../public/images/Tim.jpeg">
+                    <div class="memberInfo">Tim Oliver | Recruiter | Senior Partner</div>
+                </div>
+                <div>
+                    <img class="memberImage" src="../public/images/Dave.png">
+                    <div class="memberInfo">Dave Buergler | Recruiter | Senior Partner</div>
+                </div>
+                <div>
+                    <img class="memberImage" src="../public/images/Joel(1).png">
+                    <div class="memberInfo">Joel Oliver | Recruiter</div>
+                </div>
             </div>
             <div class="parallax_layer parallax_layer--back">
-                <div class="title aboutBackgroundTitle">Background Layer</div>
+                <div>Background Layer</div>
             </div>
         </div>
         <div id="jobs" class="parallax_group darkText">
             <div class="parallax_layer parallax_layer--fore">
                 <div class="title jobsForegroundTitle">  
             </div>  
-            <div class="col s12 m4 jobsRightBody overFlowScroll">
+            <div class="col s12 m4 jobsRightBody">
                 <h5>New Jobs:</h5>
                 <div id="loxoResponse"></div>
+                <div class="jobsRightExtra">
+                    <h4>Lorem ipsum</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Rhoncus aenean vel elit scelerisque. Neque egestas congue quisque egestas diam in arcu cursus. Vulputate mi sit amet mauris 
+                    commodo quis imperdiet massa. </p>
+                    <h4>Morbi leo</h4>
+                    <p>Morbi leo urna molestie at. Porttitor leo a diam sollicitudin tempor id. Urna et pharetra pharetra 
+                    massa massa ultricies mi quis hendrerit. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Libero volutpat sed cras 
+                    ornare arcu dui vivamus. Gravida rutrum quisque non tellus orci ac auctor. Suspendisse ultrices gravida dictum fusce ut placerat 
+                    orci nulla pellentesque. Viverra nam libero justo laoreet sit amet.</p>
+                </div>
             </div>
             </div>
             <div class="parallax_layer parallax_layer--base">
                 <div class="title jobsBaseTitle"></div>
-                <div class="jobsLeftBody">
+                <div class="jobsLeftBody s12 m4">
                     <div class="">
                         <h5 class="center">Excellence in Food Industry Recruitment</h5>
                         <p>At OSI, we specialize in food industry executive recruitment. Whether you are an employer looking for the perfect candidate, or you a food industry professional looking to make a change, feel free to take a look around.<br></p>
@@ -157,8 +180,15 @@ setTimeout(() => {
             },function(){
                 $(this).css({
                     "transform":"scale(1)",
-                    "color": "F3E9D2"
+                    "color": "#F3E9D2"
                 })
+            }
+        )
+        $(".dataItem").hover(
+            function(){
+                $(this).css("color", "#F3E9D2")
+            },function(){
+                $(this).css("color", "#062F4F")
             }
         )
     }, 3100);
@@ -169,31 +199,30 @@ $.ajax({
     url: "https://loxo.co/api/osi-jobs/jobs",
     type: "GET",
     // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support. 
-    // this might get changed at some point, but it looks like that is the (maybe SHA256) encoding of the username and password
+    // this might get changed at some point, but it looks like that is the (base-64) encoding of the username and password
     beforeSend: xhr=> {xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')},
     // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
     // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
     // be warned-- they are the weakest of sauce.
     data:{"job_status_id":2841},
-    // this might sidestep the username and password requirement.
+    // not sure why this is here.
     xhrFields: {withCredentials: true},
-    success: data=> {
+    success: data => {
         console.log(data.results);
         let items = [];
-        $.each( data.results, i=> {
+        $.each( data.results, i => {
             // console.log(data.results[i])
             // this builds out the list items in the jobs column of the main content.
             items.push(`
                 <li id="${data.results[i].title}">
-                    <a href="https://loxo.co/job/${data.results[i].id}" target="blank">${data.results[i].title}</a> 
+                    <a href="https://loxo.co/job/${data.results[i].id}" target="blank" class="dataItem">${data.results[i].title}</a> 
                     (${data.results[i].macro_address})
                 </li>
             `);
         });
-
-        // shuffle items based on the number of items in the list in the list, so they aren't alphabetical
+        // shuffle items based on the number of items in the list in the list so they aren't alphabetical
         items.shuffle()
-        //truncate list if you so choose, uncomment and replace items.join... with topJobs.join...
+        // truncate list if you so choose, uncomment and replace items.join... with topJobs.join...
         // let topJobs = items.slice(0,10)
         // push final items array to html for view on homepage
         $(`<ul/>`,{

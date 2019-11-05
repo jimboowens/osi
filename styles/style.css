@@ -28,13 +28,14 @@ h2{
 
 }
 
-h3{
-    
-}
-
 h4{
 
 }
+*/
+h4{
+  padding:15px;  
+}
+/*
 
 h5{
 
@@ -43,6 +44,19 @@ h5{
 h6{
 
 } */
+
+a{
+    color: #062f4f;
+}
+
+.dataItem{
+    transition: all .2s ease-in-out;
+}
+
+.dataItem:hover{
+    transform:scale(1.2);
+    text-decoration: underline;
+}
 
 p{
     font-size: 1.2vw;
@@ -310,15 +324,19 @@ z-index:100 !important;
 }
 
 .member{
-    margin-bottom: 60px;
+    margin-bottom: 15px;
 }
 .memberImage{
     width:200px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-top:30px;
+    margin-left: 15%;
+    margin-right: 85%;
+    border-radius: 7px;
+    /* width: 50%; */
+}
+
+.memberInfo{
+    margin:25px;
 }
 
 .contactImage,.ventureImage{
@@ -460,12 +478,22 @@ z-index:100 !important;
     background-size:cover;
 }
 
+.aboutTitle{
+    padding-top:65px;
+}
+
 .aboutBaseTitle{
     left:30%;
 }
 
 .aboutBackgroundTitle{
     left:80%;
+}
+
+.aboutLeftBody{
+    padding-top:15vh;
+    width:50%;
+    padding-left:1vw;
 }
 
 /* ----------------page 3-------------------- */
@@ -574,12 +602,16 @@ background: #F3E9D2;
     color: #88D498;
 }
 
-/* .overFlowScroll{
-} */
+.jobsRightExtra{
+    margin-top: 5vh;
+    height:20vh;
+    overflow-y:auto;
+}
 
 #loxoResponse{
     overflow-y:auto;
-    height:100%;
-    background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/contact_us.png');
+    height:50vh;
+    background-image:linear-gradient(rgba(195, 236, 234, 0.8), rgb(79, 122, 88)), url('../public/images/licensed/meals/tomato_pasta_landscape_3.jpg');
     background-size: cover;
+    border-radius: 15px;
 }
