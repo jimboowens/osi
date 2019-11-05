@@ -325,6 +325,7 @@ z-index:100 !important;
 
 .member{
     margin-bottom: 15px;
+    border-bottom: 2px solid #062f4f;
 }
 .memberImage{
     width:200px;
@@ -466,7 +467,8 @@ z-index:100 !important;
     color: #062F4F;
     left:40%;
     top:75%;
-    /* background-image: linear-gradient(to left, rgba(79, 209, 209, 0.8), #F3E9D2); */
+    background-image: linear-gradient(to left, rgba(158, 157, 155, 0.8), #F3E9D2);
+    border-radius:7px;
 }
 
 /* ----------------page 2-------------------- */
@@ -492,8 +494,28 @@ z-index:100 !important;
 
 .aboutLeftBody{
     padding-top:15vh;
-    width:50%;
+    width:100%;
     padding-left:1vw;
+    border-bottom:2px  rgba(6, 47, 79, 0.5);
+}
+
+.aboutRightBody{
+    z-index:9999;
+    padding-top:15vh;
+    /* padding-top:2vh; */
+    margin-top:70px;
+    margin-right:15px;
+    margin-left:40%;
+}
+
+.aboutInfo{
+    background-color: rgba(6, 47, 79, 0.5);
+    margin:10vh;
+    border-radius:7px;
+}
+
+.aboutInfo:first-child{
+    margin-top:-6.5vh;
 }
 
 /* ----------------page 3-------------------- */
@@ -502,7 +524,6 @@ z-index:100 !important;
 }
 #jobs .parallax_layer--base {
     background: #F3E9D2;
-    border-bottom:2px solid #062F4F;
 }
 
 .jobsForegroundTitle{

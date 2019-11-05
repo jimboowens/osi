@@ -43,23 +43,49 @@ let mainHTML= `
             </div>
         </div>
         <div id="about" class="parallax_group">
-            <h4 class="aboutTitle">About Us</h4>
-            <div class="parallax_layer parallax_layer--base aboutLeftBody">
-                <div>
-                    <img class="memberImage" src="../public/images/Tim.jpeg">
-                    <div class="memberInfo">Tim Oliver | Recruiter | Senior Partner</div>
-                </div>
-                <div>
-                    <img class="memberImage" src="../public/images/Dave.png">
-                    <div class="memberInfo">Dave Buergler | Recruiter | Senior Partner</div>
-                </div>
-                <div>
-                    <img class="memberImage" src="../public/images/Joel(1).png">
-                    <div class="memberInfo">Joel Oliver | Recruiter</div>
+            <div class="parallax_layer parallax_layer--base">
+                <div class="aboutLeftBody">
+                    <div class="member">
+                        <img class="memberImage" src="../public/images/Tim.jpeg">
+                        <div class="memberInfo">Tim Oliver | Recruiter | Senior Partner</div>
+                    </div>
+                    <div class="member">
+                        <img class="memberImage" src="../public/images/Dave.png">
+                        <div class="memberInfo">Dave Buergler | Recruiter | Senior Partner</div>
+                    </div>
+                    <div class="member">
+                        <img class="memberImage" src="../public/images/Joel(1).png">
+                        <div class="memberInfo">Joel Oliver | Recruiter</div>
+                    </div>
                 </div>
             </div>
             <div class="parallax_layer parallax_layer--back">
-                <div>Background Layer</div>
+                <div class="aboutRightBody">
+                    <div class="aboutInfo">
+                        <p>
+                            Tim has been recruiting in the food industry for 25+ years. He previously held office level positions with two other nationwide 
+                            search firms before starting OSI, his own company of food industry recruiters, in 1992. Tim has BS & MS degrees in Food Science 
+                            from the University of Georgia. He worked in R&D for a Fortune 500 company and a Production Supervisor for a major food processor. 
+                            He is a Certified Personnel Consultant as awarded by the National Association of Personnel Services.
+                        </p>
+                    </div>
+                    <div class="aboutInfo">
+                        <p>
+                            Dave has BS and MS degrees from the University of Missouri. He has 25+ years of industry experience. Dave started his career as a Food 
+                            Technologist for a Fortune 500 company. Then he moved into the area of Sensory/Marketing Research. Dave then joined a large foodservice 
+                            company as Senior Manager of Marketing Research. He eventually held Director-level positions in New Product Marketing, Brand Management, 
+                            and Field Marketing. Dave took his background and experience to the team of food industry recruiters in 1998.
+                        </p>
+                    </div>
+                    <div class="aboutInfo">
+                        <p>
+                            Joel followed in his father’s footsteps as a recruiter after completing his Masters degree. What began as a temporary job to make ends 
+                            meet has turned into a career. With his M.Div., his heart is for ministry and serving God’s church globally. But today’s economy calls 
+                            more and more for bivocational ministers. Joel has been with OSI since 2012 including a 12 month sabbatical to serve with his wife as 
+                            missionaries in Honduras.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="jobs" class="parallax_group darkText">
@@ -133,6 +159,9 @@ let mainHTML= `
             </div>
             <div class="parallax_layer parallax_layer--base">
                 <div class="title">Base Layer 7</div>
+                <div>
+                    <p>OSI, a group of food industry recruiters, was established in 1992 and currently operates offices in Georgia, North Carolina, and Northern Virginia. OSI is a member of and adheres to all ethics and standards of the Georgia Association of Personnel Services. Our mission is to provide our clients with the highest quality service, professionalism and ethics, while pleasing God in all that we do.</p>
+                </div>
             </div>
         </div>
     </div>
