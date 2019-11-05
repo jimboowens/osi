@@ -233,5 +233,5 @@ $.ajax({
 })
 
 $(document).ready(()=>{
-  console.log('ready');
+  console.log('ready and rarin');
 })
