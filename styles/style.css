@@ -573,3 +573,13 @@ background: #F3E9D2;
 .navOptions:hover{
     color: #88D498;
 }
+
+/* .overFlowScroll{
+} */
+
+#loxoResponse{
+    overflow-y:auto;
+    height:100%;
+    background-image:linear-gradient(rgba(79, 209, 209, 0.8), rgb(6, 47, 79)), url('../public/images/contact_us.png');
+    background-size: cover;
+}

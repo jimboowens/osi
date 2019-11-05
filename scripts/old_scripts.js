@@ -117,8 +117,8 @@ let footerHTML = `
         </ul>
     </nav>
 `
-//================================END OF ONLOAD HTML INJECTIONS================================
-//=============================START OF ONCLICK HTML TO BE INJECTED============================
+//==================================END OF ONLOAD HTML INJECTIONS================================
+//===============================START OF ONCLICK HTML TO BE INJECTED============================
 let aboutHTML = `
     <div class="aboutPage">
         <div class="headerDiv blue darken-4">

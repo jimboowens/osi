@@ -54,7 +54,7 @@ let mainHTML= `
             <div class="parallax_layer parallax_layer--fore">
                 <div class="title jobsForegroundTitle">  
             </div>  
-            <div class="col s12 m4 jobsRightBody">
+            <div class="col s12 m4 jobsRightBody overFlowScroll">
                 <h5>New Jobs:</h5>
                 <div id="loxoResponse"></div>
             </div>
@@ -117,7 +117,7 @@ let mainHTML= `
 
 //==================================END OF HTML TO BE INJECTED================================
 
-// prototype function to shuffle response array from loxo
+// prototype function to shuffle response array from loxo, if you so choose
 
 Array.prototype.shuffle = function() {
     let i=this.length,j,placeHolder;
@@ -144,6 +144,8 @@ setTimeout(() => {
     });
 }, 2000);
 
+//==============================Styling for hover on navbar links==============================
+
 setTimeout(() => {
         $(main).prepend(navBarHTML);
         $(".navOptions").hover(
@@ -167,13 +169,13 @@ $.ajax({
     url: "https://loxo.co/api/osi-jobs/jobs",
     type: "GET",
     // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support. 
-    // this might get changed at some point if and when this basic auth expires, but emailing support is the only way I know of to get it.
+    // this might get changed at some point, but it looks like that is the (maybe SHA256) encoding of the username and password
     beforeSend: xhr=> {xhr.setRequestHeader('Authorization', 'Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ=')},
     // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
     // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
     // be warned-- they are the weakest of sauce.
     data:{"job_status_id":2841},
-    // this sidesteps the username and password requirement.
+    // this might sidestep the username and password requirement.
     xhrFields: {withCredentials: true},
     success: data=> {
         console.log(data.results);
@@ -181,17 +183,22 @@ $.ajax({
         $.each( data.results, i=> {
             // console.log(data.results[i])
             // this builds out the list items in the jobs column of the main content.
-            items.push(`<li id="${data.results[i].title}"><a href="https://loxo.co/job/${data.results[i].id}">${data.results[i].title}</a> (${data.results[i].macro_address})</li>`);
+            items.push(`
+                <li id="${data.results[i].title}">
+                    <a href="https://loxo.co/job/${data.results[i].id}" target="blank">${data.results[i].title}</a> 
+                    (${data.results[i].macro_address})
+                </li>
+            `);
         });
 
-        // shuffle items in the list so they aren't alphabetical based on the number of items in the list
+        // shuffle items based on the number of items in the list in the list, so they aren't alphabetical
         items.shuffle()
-        //truncate list to make more consistent with other two columns in div
-        let itemsFinalForHomePage = items.slice(0,10)
+        //truncate list if you so choose, uncomment and replace items.join... with topJobs.join...
+        // let topJobs = items.slice(0,10)
         // push final items array to html for view on homepage
         $(`<ul/>`,{
         "class":"bullet-content",
-        html:itemsFinalForHomePage.join(``)
+        html:items.join(``)
         }).appendTo( "#loxoResponse" )
     },
 })
