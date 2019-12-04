@@ -219,11 +219,6 @@ body{
     width:100%;
 }
 
-.dropdownOptions{
-    display:block;
-    padding:15px;
-}
-
 .OSIJobs{
     padding-left:30px;
     font-size:1.5vw !important;
@@ -257,10 +252,19 @@ body{
 }
   
 #panel {
-padding: 50px;
-display: none;
-z-index:100 !important;
+    background-color: #062f4f;    
+    padding: -50px;
+    display: none;
+    border-radius: 5px;
+    z-index:100 !important;
 }
+
+.dropdownOptions{
+    display:block;
+    /* width:50% */
+    /* padding:15px; */
+}
+
 
 @media(max-width:992px){
   
@@ -324,6 +328,7 @@ z-index:100 !important;
 }
 
 .member{
+    display: block;
     margin-bottom: 15px;
     border-bottom: 2px solid #062f4f;
 }
@@ -338,6 +343,7 @@ z-index:100 !important;
 
 .memberInfo{
     margin:25px;
+    margin-left:3vw;
 }
 
 .contactImage,.ventureImage{
@@ -510,12 +516,20 @@ z-index:100 !important;
 
 .aboutInfo{
     background-color: rgba(6, 47, 79, 0.5);
-    margin:10vh;
+    margin:9vh;
     border-radius:7px;
 }
 
 .aboutInfo:first-child{
-    margin-top:-6.5vh;
+    margin-top:-8.75vh;
+}
+
+.aboutInfo:nth-child(2){
+    margin-top:9.75vh;
+}
+
+.aboutInfo:nth-child(3){
+    margin-top:9.75vh;
 }
 
 /* ----------------page 3-------------------- */
