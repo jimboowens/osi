@@ -1,7 +1,7 @@
 html{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom:60px;
-    font-size:1.5vw !important;
+    /* font-size:1.5vw !important; */
     /* background: url("../public/images/background.jpg"); */
     overflow:hidden;
     scroll-behavior: smooth;
@@ -59,7 +59,7 @@ a{
 }
 
 p{
-    font-size: 1.2vw;
+    /* font-size: 1.2vw; */
 }
 
 body{
@@ -328,9 +328,9 @@ body{
 }
 
 .member{
-    display: block;
+    display: flex;
     margin-bottom: 15px;
-    border-bottom: 2px solid #062f4f;
+    border-top: 2px solid #062f4f;
 }
 .memberImage{
     width:200px;
@@ -343,7 +343,9 @@ body{
 
 .memberInfo{
     margin:25px;
-    margin-left:3vw;
+    /* margin-left:3vw; */
+    margin-bottom: auto;
+
 }
 
 .contactImage,.ventureImage{
@@ -444,6 +446,7 @@ body{
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
 /* style the groups
 --------------------------------------------- */
 /* ----------------page 1-------------------- */
@@ -472,10 +475,21 @@ body{
     text-align:left;
     color: #062F4F;
     left:40%;
-    top:75%;
+    top:35%;
     background-image: linear-gradient(to left, rgba(158, 157, 155, 0.8), #F3E9D2);
-    border-radius:7px;
+    border-radius: 15px;
+    padding:10px;
 }
+
+#titleJobsResponse{
+    overflow-y:auto;
+    height:20vh;
+    background-image:linear-gradient(rgba(195, 236, 234, 0.8), rgb(79, 122, 88)), url('../public/images/licensed/meals/tomato_pasta_with_flowers_landscape.JPG');
+    background-size: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 
 /* ----------------page 2-------------------- */
 #about {
@@ -516,16 +530,22 @@ body{
 
 .aboutInfo{
     background-color: rgba(6, 47, 79, 0.5);
-    margin:9vh;
+    /* margin:9vh; */
     border-radius:7px;
+    overflow-y:auto;
+    font-size:25px;
+}
+
+.aboutInfo > p{
+    height:50px;
 }
 
 .aboutInfo:first-child{
-    margin-top:-8.75vh;
+    /* margin-top:-8.75vh; */
 }
 
 .aboutInfo:nth-child(2){
-    margin-top:9.75vh;
+    /* margin-top:9.75vh; */
 }
 
 .aboutInfo:nth-child(3){
@@ -546,6 +566,14 @@ body{
 
 .jobsBaseTitle{
     left:80%;
+}
+
+#loxoResponse{
+    overflow-y:auto;
+    height:50vh;
+    background-image:linear-gradient(rgba(195, 236, 234, 0.8), rgb(79, 122, 88)), url('../public/images/licensed/meals/tomato_pasta_landscape_3.jpg');
+    background-size: cover;
+    border-radius: 15px;
 }
 
 .jobsLeftBody{
@@ -605,6 +633,7 @@ background: #F3E9D2;
 
 .navOptions {
     display: inline-block;
+    font-size: 1.5vw;
     color: #F3E9D2;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -643,10 +672,3 @@ background: #F3E9D2;
     overflow-y:auto;
 }
 
-#loxoResponse{
-    overflow-y:auto;
-    height:50vh;
-    background-image:linear-gradient(rgba(195, 236, 234, 0.8), rgb(79, 122, 88)), url('../public/images/licensed/meals/tomato_pasta_landscape_3.jpg');
-    background-size: cover;
-    border-radius: 15px;
-}

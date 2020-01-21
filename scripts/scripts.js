@@ -37,6 +37,10 @@ let splashHTML = `
             <div class="title mainTitle left">
                 <h1 class="splashHeader">OSI Jobs</h1>
                 <h3>Excellence in Food Industry Recruitment</h3>
+                <br>
+                <div>
+                    <div id="titleJobsResponse"></div>
+                </div>
             </div>
             <div>
                 <img class="z-depth-5 splashImage right" src="./public/images/people_in_market.jpg" />
@@ -49,31 +53,26 @@ let aboutHTML = `
     <div id="about" class="parallax_group">
         <div class="parallax_layer parallax_layer--base">
             <div class="aboutLeftBody">
-                <div class="member">
-                    <img class="memberImage" src="../public/images/Tim.jpeg">
-                    <div class="memberInfo">Tim Oliver | Recruiter | Senior Partner</div>
+                <div class="member row">
+                    <div class="col s4">
+                        <img class="memberImage" src="../public/images/Tim.jpeg">
+                        <div class="memberInfo">Tim Oliver | Recruiter | Senior Partner</div>
+                    </div>
+                    <div class="aboutInfo col s7">
+                        <p>
+                            Tim has been recruiting in the food industry for 25+ years. He previously held office level positions with two other nationwide 
+                            search firms before starting OSI, his own company of food industry recruiters, in 1992. Tim has BS & MS degrees in Food Science 
+                            from the University of Georgia. He worked in R&D for a Fortune 500 company and a Production Supervisor for a major food processor. 
+                            He is a Certified Personnel Consultant as awarded by the National Association of Personnel Services.
+                        </p>
+                    </div>
                 </div>
-                <div class="member">
-                    <img class="memberImage" src="../public/images/Dave.png">
-                    <div class="memberInfo">Dave Buergler | Recruiter | Senior Partner</div>
+                <div class="member row">
+                    <div class="col s4">
+                        <img class="memberImage" src="../public/images/Dave.png">
+                        <div class="memberInfo">Dave Buergler | Recruiter | Senior Partner</div>
                 </div>
-                <div class="member">
-                    <img class="memberImage" src="../public/images/Joel(1).png">
-                    <div class="memberInfo">Joel Oliver | Recruiter</div>
-                </div>
-            </div>
-        </div>
-        <div class="parallax_layer parallax_layer--back">
-            <div class="aboutRightBody">
-                <div class="aboutInfo">
-                    <p>
-                        Tim has been recruiting in the food industry for 25+ years. He previously held office level positions with two other nationwide 
-                        search firms before starting OSI, his own company of food industry recruiters, in 1992. Tim has BS & MS degrees in Food Science 
-                        from the University of Georgia. He worked in R&D for a Fortune 500 company and a Production Supervisor for a major food processor. 
-                        He is a Certified Personnel Consultant as awarded by the National Association of Personnel Services.
-                    </p>
-                </div>
-                <div class="aboutInfo">
+                <div class="aboutInfo col s7">
                     <p>
                         Dave has BS and MS degrees from the University of Missouri. He has 25+ years of industry experience. Dave started his career as a Food 
                         Technologist for a Fortune 500 company. Then he moved into the area of Sensory/Marketing Research. Dave then joined a large foodservice 
@@ -81,7 +80,13 @@ let aboutHTML = `
                         and Field Marketing. Dave took his background and experience to the team of food industry recruiters in 1998.
                     </p>
                 </div>
-                <div class="aboutInfo">
+                </div>
+                <div class="member row">
+                    <div class="col s4">
+                        <img class="memberImage" src="../public/images/Joel(1).png">
+                        <div class="memberInfo">Joel Oliver | Recruiter</div>
+                    </div>
+                <div class="aboutInfo col s7">
                     <p>
                         Joel followed in his father’s footsteps as a recruiter after completing his Masters degree. What began as a temporary job to make ends 
                         meet has turned into a career. With his M.Div., his heart is for ministry and serving God’s church globally. But today’s economy calls 
@@ -89,6 +94,11 @@ let aboutHTML = `
                         missionaries in Honduras.
                     </p>
                 </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax_layer parallax_layer--back">
+            <div class="aboutRightBody">
             </div>
         </div>
     </div>
@@ -234,6 +244,8 @@ Array.prototype.shuffle = function() {
   return this;
 };
 
+
+
 // function to remove ball from styling in the Window
 setTimeout(() => {
 
@@ -277,7 +289,6 @@ setTimeout(() => {
   //==================================AJAX REQUEST FOR LOXO JOBS================================
   
   $.ajax({
-  
     url: "https://loxo.co/api/osi-jobs/jobs",
     type: "GET",
     // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support.
@@ -296,29 +307,50 @@ setTimeout(() => {
     xhrFields: { withCredentials: true },
     // this is where the magic happens
     success: data => {
-      // this console log give you all of the response
-      // console.log(data.results);
-      let items = [];
-      $.each(data.results, i => {
-        // console.log(data.results[i])
-        // this builds out the list items in the jobs column of the main content.
-        items.push(`
-                    <li id="${data.results[i].title}">
-                        <a href="https://loxo.co/job/${data.results[i].id}" target="blank" class="dataItem">${data.results[i].title}</a> 
-                        (${data.results[i].macro_address})
-                    </li>
-                `);
-      });
-      // shuffle items based on the number of items in the list in the list so they aren't alphabetical... if you want
-      // items.shuffle();
-      // truncate list if you so choose, uncomment the following line and replace items.join... with topJobs.join... in the append
-      // let topJobs = items.slice(0,10)
-      // push final items array to html for view on homepage
-      $(`<ul/>`, {
-        class: "bullet-content",
-        html: items.join(``)
-      }).appendTo("#loxoResponse");
+        // this console log give you all of the response
+        // console.log(data.results);
+        
+        let sortedShortResults = data.results.slice(0,5).slice().sort((a,b) =>b.date-a.date);
+        let sortedItems = [];
+        let items = [];
+        console.log(sortedShortResults);
+
+        for (const sortedResult of sortedShortResults){
+            sortedItems.push(`
+            <li id="${sortedResult.title}">
+                <a href="https://loxo.co/job/${sortedResult.id}" target="blank" class="dataItem">${sortedResult.title}</a> 
+                (${sortedResult.macro_address})
+            </li>
+        `);
+        }
+        $(`<ul/>`, {
+            class: "bullet-content",
+            html: sortedItems.join(``)
+        }).appendTo("#titleJobsResponse");
+
+        for(const result of data.results) {
+            // this builds out the list items in the jobs column of the main content.
+            items.push(`
+                <li id="${result.title}">
+                    <a href="https://loxo.co/job/${result.id}" target="blank" class="dataItem">${result.title}</a> 
+                    (${result.macro_address})
+                </li>
+            `);
+        };
+        // shuffle items based on the number of items in the list in the list so they aren't alphabetical... if you want
+        // items.shuffle();
+        // truncate list if you so choose, uncomment the following line and replace items.join... with topJobs.join... in the append
+        // let topJobs = items.slice(0,10)
+        // push final items array to html for view on homepage
+        $(`<ul/>`, {
+            class: "bullet-content",
+            html: items.join(``)
+        }).appendTo("#loxoResponse");
+
+
+
     }
+    
   });
 
     $("#dropdown").click(()=>{
