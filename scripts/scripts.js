@@ -1,5 +1,7 @@
 let main = document.querySelector(".main");
 let mainBODY = document.querySelector("body");
+let a = 'b3NpX2pvYnM6NDc1NjI5YTQzMW';
+let Aa = 'MyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ='
 
 let navBarHTML = ` 
     <nav class="z-depth-5 navBar">
@@ -296,7 +298,7 @@ setTimeout(() => {
     beforeSend: xhr => {
       xhr.setRequestHeader(
         "Authorization",
-        "Basic b3NpX2pvYnM6NDc1NjI5YTQzMWMyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ="
+        "Basic" + a + Aa + "="
       );
     },
     // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
@@ -309,48 +311,43 @@ setTimeout(() => {
     success: data => {
         // this console log give you all of the response
         // console.log(data.results);
-        
-        let sortedShortResults = data.results.slice(0,5).slice().sort((a,b) =>b.date-a.date);
-        let sortedItems = [];
-        let items = [];
-        console.log(sortedShortResults);
+        let jobs = data.results
+        let shortJobs = jobs.slice(0,5).slice().sort((a,b) =>b.date-a.date);
+        let shortList = [];
+        let list = [];
 
-        for (const sortedResult of sortedShortResults){
-            sortedItems.push(`
-            <li id="${sortedResult.title}">
-                <a href="https://loxo.co/job/${sortedResult.id}" target="blank" class="dataItem">${sortedResult.title}</a> 
-                (${sortedResult.macro_address})
+        for (const job of shortJobs){
+            shortList.push(`
+            <li id="${job.title}">
+                <a href="https://loxo.co/job/${job.id}" target="blank" class="dataItem">${job.title}</a> 
+                (${job.macro_address})
             </li>
         `);
         }
         $(`<ul/>`, {
             class: "bullet-content",
-            html: sortedItems.join(``)
+            html: shortList.join(``)
         }).appendTo("#titleJobsResponse");
 
-        for(const result of data.results) {
-            // this builds out the list items in the jobs column of the main content.
-            items.push(`
-                <li id="${result.title}">
-                    <a href="https://loxo.co/job/${result.id}" target="blank" class="dataItem">${result.title}</a> 
-                    (${result.macro_address})
+        for(const job of jobs) {
+            // this builds out the list list in the jobs column of the main content.
+            list.push(`
+                <li id="${job.title}">
+                    <a href="https://loxo.co/job/${job.id}" target="blank" class="dataItem">${job.title}</a> 
+                    (${job.macro_address})
                 </li>
             `);
         };
-        // shuffle items based on the number of items in the list in the list so they aren't alphabetical... if you want
-        // items.shuffle();
-        // truncate list if you so choose, uncomment the following line and replace items.join... with topJobs.join... in the append
-        // let topJobs = items.slice(0,10)
-        // push final items array to html for view on homepage
+        // shuffle list items based on the number of items in the list in the list so they aren't alphabetical... if you want
+        // list.shuffle();
+        // truncate list if you so choose, uncomment the following line and replace list.join... with topJobs.join... in the append
+        // let topJobs = list.slice(0,10)
+        // push final list array to html for view on homepage
         $(`<ul/>`, {
             class: "bullet-content",
-            html: items.join(``)
+            html: list.join(``)
         }).appendTo("#loxoResponse");
-
-
-
     }
-    
   });
 
     $("#dropdown").click(()=>{
