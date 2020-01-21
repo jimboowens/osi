@@ -1,7 +1,5 @@
 let main = document.querySelector(".main");
 let mainBODY = document.querySelector("body");
-let a = 'b3NpX2pvYnM6NDc1NjI5YTQzMW';
-let Aa = 'MyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ='
 
 let navBarHTML = ` 
     <nav class="z-depth-5 navBar">
@@ -246,11 +244,8 @@ Array.prototype.shuffle = function() {
   return this;
 };
 
-
-
 // function to remove ball from styling in the Window
 setTimeout(() => {
-
   $(".ball").css({
     position: "unset",
     visibility: "none !important",
@@ -258,7 +253,10 @@ setTimeout(() => {
     animation: "none",
     "margin-top": "43px"
   });
-  
+
+  let a = "sic b3NpX2pvYnM6NDc1NjI5YTQzMW";
+  let Aa = "MyNWEwNzlmMzBkYTFlYmY5Mjk4MDQ";
+
   // prepend the navbar
 
   $(main).prepend(navBarHTML);
@@ -289,17 +287,14 @@ setTimeout(() => {
   );
 
   //==================================AJAX REQUEST FOR LOXO JOBS================================
-  
+
   $.ajax({
     url: "https://loxo.co/api/osi-jobs/jobs",
     type: "GET",
     // loxo docs are very unforgiving, and this set header was only sent after multiple painful emails to support.
     // this might get changed at some point, but that (Basic junk) is the base-64 encoding of the username and password
     beforeSend: xhr => {
-      xhr.setRequestHeader(
-        "Authorization",
-        "Basic" + a + Aa + "="
-      );
+      xhr.setRequestHeader("Authorization", "Ba" + a + Aa + "=");
     },
     // the following is the parameter passed in to only get active jobs from the database of jobs for OSI. Other params can be found in the docs:
     // http://help.loxo.co/articles/446640-integrate-your-job-listing-with-your-website-through-an-api
@@ -309,60 +304,61 @@ setTimeout(() => {
     xhrFields: { withCredentials: true },
     // this is where the magic happens
     success: data => {
-        // this console log give you all of the response
-        // console.log(data.results);
-        let jobs = data.results
-        let shortJobs = jobs.slice(0,5).slice().sort((a,b) =>b.date-a.date);
-        let shortList = [];
-        let list = [];
+      // this console log give you all of the response
+      // console.log(data.results);
+      let jobs = data.results;
+      let shortJobs = jobs
+        .slice(0, 5)
+        .slice()
+        .sort((a, b) => b.date - a.date);
+      let shortList = [];
+      let list = [];
 
-        for (const job of shortJobs){
-            shortList.push(`
+      for (const job of shortJobs) {
+        shortList.push(`
             <li id="${job.title}">
                 <a href="https://loxo.co/job/${job.id}" target="blank" class="dataItem">${job.title}</a> 
                 (${job.macro_address})
             </li>
         `);
-        }
-        $(`<ul/>`, {
-            class: "bullet-content",
-            html: shortList.join(``)
-        }).appendTo("#titleJobsResponse");
+      }
+      $(`<ul/>`, {
+        class: "bullet-content",
+        html: shortList.join(``)
+      }).appendTo("#titleJobsResponse");
 
-        for(const job of jobs) {
-            // this builds out the list list in the jobs column of the main content.
-            list.push(`
+      for (const job of jobs) {
+        // this builds out the list list in the jobs column of the main content.
+        list.push(`
                 <li id="${job.title}">
                     <a href="https://loxo.co/job/${job.id}" target="blank" class="dataItem">${job.title}</a> 
                     (${job.macro_address})
                 </li>
             `);
-        };
-        // shuffle list items based on the number of items in the list in the list so they aren't alphabetical... if you want
-        // list.shuffle();
-        // truncate list if you so choose, uncomment the following line and replace list.join... with topJobs.join... in the append
-        // let topJobs = list.slice(0,10)
-        // push final list array to html for view on homepage
-        $(`<ul/>`, {
-            class: "bullet-content",
-            html: list.join(``)
-        }).appendTo("#loxoResponse");
+      }
+      // shuffle list items based on the number of items in the list in the list so they aren't alphabetical... if you want
+      // list.shuffle();
+      // truncate list if you so choose, uncomment the following line and replace list.join... with topJobs.join... in the append
+      // let topJobs = list.slice(0,10)
+      // push final list array to html for view on homepage
+      $(`<ul/>`, {
+        class: "bullet-content",
+        html: list.join(``)
+      }).appendTo("#loxoResponse");
     }
   });
 
-    $("#dropdown").click(()=>{
-        // $("#panel").toggle()
-        $("#panel").slideToggle("slow")
-    })
+  $("#dropdown").click(() => {
+    // $("#panel").toggle()
+    $("#panel").slideToggle("slow");
+  });
 
-  
-    //dropdown menu toggle
-    $(".dropdownOptions").click(() => {
-        console.log('success')
-        // $("#panel").toggle();
-        $("#panel").slideToggle("slow")
-    });
-
+  //dropdown menu toggle
+  $(".dropdownOptions").click(() => {
+    console.log("success");
+    // $("#panel").toggle();
+    $("#panel").slideToggle("slow");
+  });
 }, 3100);
 
 $(document).ready(() => {
